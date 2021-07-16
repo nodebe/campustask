@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6" lang="en-US"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en-US"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en-US"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9" lang="en-US"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en-US"> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8" />
+
+	<title>Taskerr Demo &#8211; Just another AppThemes Demos Sites site</title>
+
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	<link rel="pingback" href="https://demos.appthemes.com/taskerr/xmlrpc.php" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<link rel='dns-prefetch' href='https://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='https://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title="Taskerr Demo &raquo; Feed" href="taskerr/feed/feed.html" />
+<link rel="alternate" type="application/rss+xml" title="Taskerr Demo &raquo; Comments Feed" href="taskerr/comments/feed/feed.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/demos.appthemes.com\/taskerr\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.5"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='taskerr/wp-includes/css/dist/block-library/style.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='googleFonts-css'  href='https://fonts.googleapis.com/css?family=Lato%3A300,400,700,900,400italic%7CNoto+Serif&amp;ver=1.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='taskerr/wp-content/themes/taskerr/styles/genericons/genericons.css' type='text/css' media='all' />
+<link rel='stylesheet' id='tr-normalize-css'  href='taskerr/wp-content/themes/taskerr/foundation/css/normalize.css' type='text/css' media='all' />
+<link rel='stylesheet' id='tr-foundation-styles-css'  href='taskerr/wp-content/themes/taskerr/foundation/css/foundation.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='tr-color-css'  href='taskerr/wp-content/themes/taskerr/styles/blue.css' type='text/css' media='all' />
+<link rel='stylesheet' id='app-slider-style-css'  href='taskerr/wp-content/themes/taskerr/includes/slider/slider.css' type='text/css' media='all' />
+<link rel='stylesheet' id='appthemes_recent_posts-css'  href='taskerr/wp-content/themes/taskerr/includes/widgets/styles/widget-recent-posts.css' type='text/css' media='all' />
+<script type='text/javascript' src='taskerr/wp-content/themes/taskerr/foundation/js/vendor/modernizr.js' id='tr-modernizr-js'></script>
+<script type='text/javascript' src='taskerr/wp-includes/js/jquery/jquery.js' id='jquery-js'></script>
+<script type='text/javascript' id='jquery-js-after'>
+var AppThemes = {"ajaxurl":"\/taskerr\/wp-admin\/admin-ajax.php","current_url":"https:\/\/demos.appthemes.com\/taskerr\/"};
+</script>
+<link rel="https://api.w.org/" href="taskerr/wp-json/wp-json.json" /><link rel="alternate" type="application/json" href="taskerr/wp-json/wp/v2/pages/3.json" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://demos.appthemes.com/taskerr/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="taskerr/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.5" />
+<link rel="canonical" href="taskerr/page/1/taskerr.html" />
+<link rel='shortlink' href='taskerr/page/1/taskerr.html' />
+<link rel="alternate" type="application/json+oembed" href="taskerr/wp-json/oembed/1.0/embed.json" />
+<link rel="alternate" type="text/xml+oembed" href="taskerr/wp-json/oembed/1.0/embed.xml" />
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>	<style type="text/css" id="twentytwelve-header-css">
+			.site-title,
+		.site-description {
+			position: absolute;
+			clip: rect(1px 1px 1px 1px); /* IE7 */
+			clip: rect(1px, 1px, 1px, 1px);
+		}
+		</style>
+	<style type="text/css" id="custom-background-css">
+body.custom-background { background-image: url("https://demos.appthemes.com/taskerr/wp-content/themes/taskerr/img/bg_body.png"); background-position: left top; background-size: auto; background-repeat: repeat; background-attachment: fixed; }
+</style>
+	<link rel="icon" href="taskerr/wp-content/themes/taskerr/favicon.ico" sizes="32x32" />
+<link rel="icon" href="taskerr/wp-content/themes/taskerr/favicon.ico" sizes="192x192" />
+<link rel="apple-touch-icon" href="taskerr/wp-content/themes/taskerr/favicon.ico" />
+<meta name="msapplication-TileImage" content="https://demos.appthemes.com/taskerr/wp-content/themes/taskerr/favicon.ico?ver=1.3.4" />
+<script type="text/javascript">
+  //<![CDATA[
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-74957-32']);
+  _gaq.push(['_setDomainName', 'appthemes.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  //]]>
+</script>
+
+
+	<link rel="stylesheet" type="text/css" media="all" href="taskerr/wp-content/themes/taskerr/style.css" />
+
+	</head>
+
+<body class="home page-template page-template-front-page page-template-front-page-php page page-id-3 logged-in custom-background no-js" itemscope itemtype="http://schema.org/WebPage">
+
+	<script type="text/javascript">
+		document.body.className = document.body.className.replace('no-js','js');
+	</script>
+
+	
+	
+	<!-- HEADER -->
+	<header id="header" role="banner">
+				<div class="row">
+			<div class="large-10 large-centered columns">
+							</div><!-- end columns -->
+		</div><!-- end row -->
+
+		<div class="row">
+			<div class="large-12 columns">
+				
+		<div id="top-bar-1" class="top-bar" data-topbar>
+  			<ul class="title-area">
+				<!-- Title Area -->
+				<li class="name">
+					<ul class="social-bar left">
+													<li>
+								<a href="https://facebook.com/appthemes" title="Facebook">
+									<i class="genericon genericon-facebook"></i>
+									<span>Facebook</span>
+								</a>
+							</li>
+													<li>
+								<a href="https://twitter.com/appthemes" title="Twitter">
+									<i class="genericon genericon-twitter"></i>
+									<span>Twitter</span>
+								</a>
+							</li>
+												<li>
+							<a href="taskerr/feed/feed_2.html" title="RSS">
+								<i class="genericon genericon-feed"></i>
+								<span>RSS</span>
+							</a>
+						</li>
+					</ul>
+
+				</li>
+    			<li class="toggle-topbar menu-icon">
+					<a href="taskerr/page/1/taskerr.html#"><span>Menu</span></a>
+				</li>
+  			</ul>
+			<section class="top-bar-section">
+				<!-- Right Nav Section -->
+				<ul class="right">
+
+											<li>
+							<a href="taskerr/favorites.html" title="Favorites">
+								<i class="genericon genericon-heart"></i>
+								<span class="hide-for-medium-only">Favorites</span>
+							</a>
+						</li>
+						<li class="inbox-btn has-dropdown unread-inbox-btn">
+							<a href="taskerr/dashboard/notifications/page/1/notifications.html" title="Notifications">
+								<i class="genericon genericon-subscribed"></i>
+								<span class="hide-for-medium-only">Notifications&nbsp;(<span class="unread-inbox">2</span>)</span>
+							</a>
+																				<ul id="notifications-dropdown" class="dropdown">
+								<li class="dropdown-label"><label>Unread notifications</label></li>
+																			<li><a class="notifications-node" href="taskerr/dashboard/notifications/page/1/notifications.html#1-53f778fbc9091-1408727291">
+												<span class="notification-date">
+													August 22, 2014 5:08 pm												</span>
+												&nbsp;&mdash;&nbsp;
+												<span class="notification-message">
+													Your review on - AppThemes - was sent to meloniq												</span>
+										</a></li>
+																			<li><a class="notifications-node" href="taskerr/dashboard/notifications/page/1/notifications.html#1-53f77337c1b32-1408725815">
+												<span class="notification-date">
+													August 22, 2014 4:43 pm												</span>
+												&nbsp;&mdash;&nbsp;
+												<span class="notification-message">
+													meloniq has marked task #6 - as Paid												</span>
+										</a></li>
+																	<li class="divider"></li>
+								<li><a class="notifications-node" href="taskerr/dashboard/notifications/page/1/notifications.html">See all &rarr;</a></li>
+							</ul>
+												</li>
+						<li>
+							<a href="taskerr/edit-profile/edit-profile.html" title="Your Profile">
+								<i class="genericon genericon-user"></i>
+								<span class="hide-for-medium-only">Your Profile</span>
+							</a>
+						</li>
+						<li>
+							<a href="taskerr/dashboard.html" title="Dashboard">
+								<i class="genericon genericon-cog"></i>
+								<span class="hide-for-medium-only">Dashboard</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://demos.appthemes.com/taskerr/wp-login.php?action=logout&#038;_wpnonce=20f58b72c5" title="Logout">
+								<i class="genericon genericon-key"></i>
+								<span class="hide-for-medium-only">Logout</span>
+							</a>
+						</li>
+
+									</ul>
+			</section>
+		</div>			</div><!-- end columns -->
+		</div><!-- end row -->
+
+		<div class="row">
+			<div class="large-12 columns site-header">
+				<div class="clearfix">
+					<h1 class="site-title left"><a href="taskerr/page/1/taskerr.html" title="Taskerr Demo" rel="home">Taskerr Demo</a></h1>
+					<h2 class="site-description right">Just another AppThemes Demos Sites site</h2>
+				</div>
+
+									<a class="site-logo" href="taskerr/page/1/taskerr.html">
+						<img src="taskerr/wp-content/themes/taskerr/img/logo-red-clock.png" class="header-image" width="151" height="27" alt="" />
+					</a>
+				
+						<nav id="top-bar-2" class="top-bar" data-topbar>
+			<ul class="title-area">
+				<li class="name"></li>
+				<li class="toggle-topbar menu-icon">
+					<a href="taskerr/page/1/taskerr.html#">
+						<span>Navigation</span>
+					</a>
+
+			</ul>
+
+			<section class="top-bar-section">
+				<!-- Right Nav Section -->
+				<ul class="right">
+					<li class="has-form">
+						<div class="row collapse">
+							<div class="search-bar large-12 columns">
+										<form role="search" method="get" id="searchform" class="searchform" action="taskerr/page/1/taskerr.html">
+			<div class="right">
+				<button value="Search" type="submit" title="Search">
+					<i class="genericon genericon-search"></i>
+					<span>Search</span>
+				</button>
+			</div>
+			<div class="search-input">
+				<input type="text" id="s" name="s" placeholder="Search" value="" />
+			</div>
+		</form>							</div>
+						</div>
+					</li>
+				</ul>
+
+				<!-- Left Nav Section -->
+				<ul id="menu-header" class="left"><li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a href="taskerr/add-service.html">Add Service</a></li>
+<li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="taskerr/how-things-work.html">How Things Work</a></li>
+<li id="menu-item-57" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57"><a href="taskerr/blog/blog.html">Blog</a></li>
+</ul>
+			</section>
+		</nav>			</div><!-- end columns -->
+		</div><!-- end row -->	</header><!-- /HEADER -->
+
+	
+	<!-- WIDGETIZED AREA -->
+	<div id="top-widgets" role="complementary">
+					<!-- widgetized area below navbar -->
+			<aside class="top-widget"><div id="top_text-7" class="top-widget_text"><div class="row"><div class="large-12 centered columns"><div id="text-7" class="widget widget_text">			<div class="textwidget"><div class="home-head row">
+<h2>Create a <strong>Micro Jobs</strong> site in minutes</h2>
+<p>This area can easily be edited from the WordPress admin area. This is nothing more than a simple text widget. You can change the content, delete it, or add a one. Happy Styling!</p>
+<a class="button large alert" href="taskerr/add-service.html">get started</a>
+</div></div>
+		</div></div></div></div></aside><aside class="top-widget"><div id="top_tr_taxonomy_list-6" class="top-widget-taxonomy-list"><div class="row"><div class="large-12 centered columns"><div id="tr_taxonomy_list-6" class="widget widget-taxonomy-list"><a href="taskerr/page/1/taskerr.html#" class="cat-down button"><i class="genericon genericon-expand"></i><span>Expand/Collapse</span></a><div class="catcol"><ul class="maincat-list small-block-grid-2 medium-block-grid-1 large-block-grid-4"><li class="maincat cat-item-23"><a href="taskerr/services/category/advertising/advertising.html" title="">Advertising</a>  <ul class="subcat-list"><li class="cat-item cat-item-104"><a href="taskerr/services/category/banner-advertising/banner-advertising.html" title="">Banner Advertising</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-98"><a href="taskerr/services/category/flyers-handouts/flyers-handouts.html" title="">Flyers &amp; Handouts</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-97"><a href="taskerr/services/category/hold-your-sign/hold-your-sign.html" title="">Hold Your Sign</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-99"><a href="taskerr/services/category/human-billboards/human-billboards.html" title="">Human Billboards</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-103"><a href="taskerr/services/category/music-promotion/music-promotion.html" title="">Music Promotion</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-105"><a href="taskerr/services/category/other-advertising/other-advertising.html" title="">Other</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-101"><a href="taskerr/services/category/outdoor-advertising/outdoor-advertising.html" title="">Outdoor Advertising</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-100"><a href="taskerr/services/category/pet-models/pet-models.html" title="">Pet Models</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-102"><a href="taskerr/services/category/radio/radio.html" title="">Radio</a> <span class="cat-item-count">(0)</span> </li>
+</ul>
+</li>
+<li class="maincat cat-item-24"><a href="taskerr/services/category/business/business.html" title="">Business</a>  <ul class="subcat-list"><li class="cat-item cat-item-112"><a href="taskerr/services/category/branding-services/branding-services.html" title="">Branding Services</a> <span class="cat-item-count">(2)</span> </li>
+<li class="cat-item cat-item-106"><a href="taskerr/services/category/business-plans/business-plans.html" title="">Business Plans</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-111"><a href="taskerr/services/category/business-tips/business-tips.html" title="">Business Tips</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-107"><a href="taskerr/services/category/career-advice/career-advice.html" title="">Career Advice</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-113"><a href="taskerr/services/category/financial-consulting/financial-consulting.html" title="">Financial Consulting</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-114"><a href="taskerr/services/category/legal-consulting/legal-consulting.html" title="">Legal Consulting</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-108"><a href="taskerr/services/category/market-research/market-research.html" title="">Market Research</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-115"><a href="taskerr/services/category/other-business/other-business.html" title="">Other</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-109"><a href="taskerr/services/category/presentations/presentations.html" title="">Presentations</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-110"><a href="taskerr/services/category/virtual-assistant/virtual-assistant.html" title="">Virtual Assistant</a> <span class="cat-item-count">(0)</span> </li>
+</ul>
+</li>
+<li class="maincat cat-item-17"><a href="taskerr/services/category/graphics-design/graphics-design.html" title="">Graphics &amp; Design</a>  <ul class="subcat-list"><li class="cat-item cat-item-36"><a href="taskerr/services/category/architecture/architecture.html" title="">Architecture</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-35"><a href="taskerr/services/category/banners-headers/banners-headers.html" title="">Banners &amp; Headers</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-34"><a href="taskerr/services/category/business-cards/business-cards.html" title="">Business Cards</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-26"><a href="taskerr/services/category/cartoons-caricatures/cartoons-caricatures.html" title="">Cartoons &amp; Caricatures</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-29"><a href="taskerr/services/category/ebook-covers-packages/ebook-covers-packages.html" title="">Ebook Covers &amp; Packages</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-33"><a href="taskerr/services/category/flyers-brochures/flyers-brochures.html" title="">Flyers &amp; Brochures</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-28"><a href="taskerr/services/category/illustration/illustration.html" title="">Illustration</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-37"><a href="taskerr/services/category/landing-pages/landing-pages.html" title="">Landing Pages</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-27"><a href="taskerr/services/category/logo-design/logo-design.html" title="">Logo Design</a> <span class="cat-item-count">(2)</span> </li>
+<li class="cat-item cat-item-38"><a href="taskerr/services/category/other/other.html" title="">Other</a> <span class="cat-item-count">(0)</span> </li>
+</ul>
+</li>
+<li class="maincat cat-item-21"><a href="taskerr/services/category/music-audio/music-audio.html" title="">Music &amp; Audio</a>  <ul class="subcat-list"><li class="cat-item cat-item-71"><a href="taskerr/services/category/audio-editing-mastering/audio-editing-mastering.html" title="">Audio Editing &amp; Mastering</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-79"><a href="taskerr/services/category/custom-ringtones/custom-ringtones.html" title="">Custom Ringtones</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-81"><a href="taskerr/services/category/custom-songs/custom-songs.html" title="">Custom Songs</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-76"><a href="taskerr/services/category/hip-hop-music/hip-hop-music.html" title="">Hip-Hop Music</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-72"><a href="taskerr/services/category/jingles/jingles.html" title="">Jingles</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-74"><a href="taskerr/services/category/music-lessons/music-lessons.html" title="">Music Lessons</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-77"><a href="taskerr/services/category/narration-voice-over/narration-voice-over.html" title="">Narration &amp; Voice-Over</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-82"><a href="taskerr/services/category/other-music-audio/other-music-audio.html" title="">Other</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-75"><a href="taskerr/services/category/rap-music/rap-music.html" title="">Rap Music</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-73"><a href="taskerr/services/category/songwriting/songwriting.html" title="">Songwriting</a> <span class="cat-item-count">(0)</span> </li>
+</ul>
+</li>
+<li class="maincat cat-item-18"><a href="taskerr/services/category/online-marketing/online-marketing.html" title="">Online Marketing</a>  <ul class="subcat-list"><li class="cat-item cat-item-40"><a href="taskerr/services/category/article-pr-submission/article-pr-submission.html" title="">Article &amp; PR Submission</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-41"><a href="taskerr/services/category/blog-mentions/blog-mentions.html" title="">Blog Mentions</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-46"><a href="taskerr/services/category/bookmarking-links/bookmarking-links.html" title="">Bookmarking &amp; Links</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-42"><a href="taskerr/services/category/domain-research/domain-research.html" title="">Domain Research</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-43"><a href="taskerr/services/category/fan-pages/fan-pages.html" title="">Fan Pages</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-48"><a href="taskerr/services/category/get-traffic/get-traffic.html" title="">Get Traffic</a> <span class="cat-item-count">(1)</span> </li>
+<li class="cat-item cat-item-44"><a href="taskerr/services/category/keywords-research/keywords-research.html" title="">Keywords Research</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-50"><a href="taskerr/services/category/other-online-marketing/other-online-marketing.html" title="">Other</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-45"><a href="taskerr/services/category/seo/seo.html" title="">SEO</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-47"><a href="taskerr/services/category/social-marketing/social-marketing.html" title="">Social Marketing</a> <span class="cat-item-count">(0)</span> </li>
+</ul>
+</li>
+<li class="maincat cat-item-22"><a href="taskerr/services/category/programming-tech/programming-tech.html" title="">Programming &amp; Tech</a>  <ul class="subcat-list"><li class="cat-item cat-item-83"><a href="taskerr/services/category/net/net.html" title="">.Net</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-84"><a href="taskerr/services/category/c/c.html" title="">C++</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-85"><a href="taskerr/services/category/css-html/css-html.html" title="">CSS &amp; HTML</a> <span class="cat-item-count">(1)</span> </li>
+<li class="cat-item cat-item-87"><a href="taskerr/services/category/databases/databases.html" title="">Databases</a> <span class="cat-item-count">(1)</span> </li>
+<li class="cat-item cat-item-92"><a href="taskerr/services/category/ios-android-mobile/ios-android-mobile.html" title="">iOS, Android &amp; Mobile</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-88"><a href="taskerr/services/category/java/java.html" title="">Java</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-89"><a href="taskerr/services/category/javascript/javascript.html" title="">JavaScript</a> <span class="cat-item-count">(1)</span> </li>
+<li class="cat-item cat-item-86"><a href="taskerr/services/category/joomla-drupal/joomla-drupal.html" title="">Joomla &amp; Drupal</a> <span class="cat-item-count">(1)</span> </li>
+<li class="cat-item cat-item-96"><a href="taskerr/services/category/other-programming-tech/other-programming-tech.html" title="">Other</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-93"><a href="taskerr/services/category/php/php.html" title="">PHP</a> <span class="cat-item-count">(1)</span> </li>
+</ul>
+</li>
+<li class="maincat cat-item-20"><a href="taskerr/services/category/video-animation/video-animation.html" title="">Video &amp; Animation</a>  <ul class="subcat-list"><li class="cat-item cat-item-65"><a href="taskerr/services/category/animation-3d/animation-3d.html" title="">Animation &amp; 3D</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-63"><a href="taskerr/services/category/commercials/commercials.html" title="">Commercials</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-64"><a href="taskerr/services/category/editing-post-production/editing-post-production.html" title="">Editing &amp; Post Production</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-69"><a href="taskerr/services/category/intros/intros.html" title="">Intros</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-70"><a href="taskerr/services/category/other-video-animation/other-video-animation.html" title="">Other</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-67"><a href="taskerr/services/category/puppets/puppets.html" title="">Puppets</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-68"><a href="taskerr/services/category/stop-motion/stop-motion.html" title="">Stop Motion</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-66"><a href="taskerr/services/category/testimonials-reviews-by-actors/testimonials-reviews-by-actors.html" title="">Testimonials &amp; Reviews by Actors</a> <span class="cat-item-count">(0)</span> </li>
+</ul>
+</li>
+<li class="maincat cat-item-19"><a href="taskerr/services/category/writing-translation/writing-translation.html" title="">Writing &amp; Translation</a>  <ul class="subcat-list"><li class="cat-item cat-item-51"><a href="taskerr/services/category/copywriting/copywriting.html" title="">Copywriting</a> <span class="cat-item-count">(1)</span> </li>
+<li class="cat-item cat-item-53"><a href="taskerr/services/category/creative-writing-scripting/creative-writing-scripting.html" title="">Creative Writing &amp; Scripting</a> <span class="cat-item-count">(1)</span> </li>
+<li class="cat-item cat-item-62"><a href="taskerr/services/category/other-writing-translation/other-writing-translation.html" title="">Other</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-61"><a href="taskerr/services/category/press-releases/press-releases.html" title="">Press Releases</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-60"><a href="taskerr/services/category/proofreading-editing/proofreading-editing.html" title="">Proofreading &amp; Editing</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-58"><a href="taskerr/services/category/resumes-cover-letters/resumes-cover-letters.html" title="">Resumes &amp; Cover Letters</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-57"><a href="taskerr/services/category/reviews/reviews.html" title="">Reviews</a> <span class="cat-item-count">(1)</span> </li>
+<li class="cat-item cat-item-52"><a href="taskerr/services/category/seo-keyword-optimization/seo-keyword-optimization.html" title="">SEO Keyword Optimization</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-59"><a href="taskerr/services/category/speech-writing/speech-writing.html" title="">Speech Writing</a> <span class="cat-item-count">(0)</span> </li>
+<li class="cat-item cat-item-55"><a href="taskerr/services/category/transcripts/transcripts.html" title="">Transcripts</a> <span class="cat-item-count">(0)</span> </li>
+</ul>
+</li>
+</ul>
+</div><!-- /catcol -->
+</div></div></div></div></aside>	</div><!-- /WIDGETIZED AREA -->
+
+	<!-- CONTENT -->
+	<div id="content">
+		<div class="archive-row row">
+
+	
+	<main id="main" class="large-9 medium-8 columns" role="main">
+
+		
+		
+		
+		<section id="services">
+			<!-- services -->
+
+			
+					<header class="archive-headline row">
+			<div class="archive-title large-6 medium-5  columns">
+				<h1>
+					Latest Services				</h1>
+			</div>
+
+			<div class="archive-sorting large-4 medium-5 left columns">
+				
+	
+		<a href="taskerr/page/1/taskerr.html#" data-dropdown="sort_by" class="button expand dropdown">
+			Sort By ...		</a><br />
+		<ul id="sort_by" class="f-dropdown">
+
+							<li><a href="taskerr/taskerr_2.html" title="Order by Date" id="sorting-date" rel="nofollow" class="sorting-link">Date<span class="sorting-order-desc">&nbsp;&darr;</span></a></li>
+							<li><a href="taskerr/taskerr_3.html" title="Order by Rating" id="sorting-rating" rel="nofollow" class="sorting-link">Rating<span class="sorting-order-desc">&nbsp;&darr;</span></a></li>
+							<li><a href="taskerr/taskerr_4.html" title="Order by Price" id="sorting-price" rel="nofollow" class="sorting-link">Price<span class="sorting-order-desc">&nbsp;&darr;</span></a></li>
+			
+		</ul>
+
+				</div>
+		</header>
+			
+	
+	
+		
+		<article id="post-17" class="loop-content sticky post-17 service type-service status-publish has-post-thumbnail hentry service_cat-logo-design service_tag-design service_tag-graphics service_tag-logos">
+	<div class="row collapse">
+
+		<div class="post-main large-10 medium-10 columns white-con">
+			<div class="features row">
+
+				<div class="person large-3 medium-3 columns">
+						<a class="service-thumbnail" href="taskerr/i-can-create-2-custom-logo-designs-for-your-business.html" title="I can create 2 CUSTOM logo designs for your business">
+		<img width="180" height="180" src="taskerr/files/2014/06/Home_Fresh_Organic_Concept_1_by_shakilnali-180x180.jpg" class="attachment-service-thumbnail size-service-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://demos.appthemes.com/taskerr/files/2014/06/Home_Fresh_Organic_Concept_1_by_shakilnali-180x180.jpg 180w, https://demos.appthemes.com/taskerr/files/2014/06/Home_Fresh_Organic_Concept_1_by_shakilnali-150x150.jpg 150w, https://demos.appthemes.com/taskerr/files/2014/06/Home_Fresh_Organic_Concept_1_by_shakilnali-60x60.jpg 60w" sizes="(max-width: 180px) 100vw, 180px" />	</a>
+	
+											<p class="featured-label">Featured</p>
+					
+					<div class="review-meta column centered">
+							<span class="stars stars-5">
+		<i class="genericon genericon-star good-star"></i><i class="genericon genericon-star good-star"></i><i class="genericon genericon-star good-star"></i><i class="genericon genericon-star good-star"></i><i class="genericon genericon-star good-star"></i>	</span>
+						</div>
+				</div>
+
+				<div class="info large-9 medium-9 columns">
+										<header>
+						<h1><a href="taskerr/i-can-create-2-custom-logo-designs-for-your-business.html" rel="bookmark">
+							<span class="featured">
+								I can create 2 CUSTOM logo designs for your business							</span>
+						</a></h1>
+					</header>
+					
+										<div class="service-description">
+						<p>We&#8217;ll make 2 logo designs for your website,company etc. The design will be created by professionals within 3 business days.   Why us? We are a group of 11 designers here, all professionals NO TEMPLATE!! We dont use it, we make your design from scratch. FREE revisions FREE source files Fast turn around time Contact Us [&hellip;]</p>
+					</div>
+									</div>
+
+			</div>
+
+			<!-- service meta author-->
+			<div class="ft-bar row">
+				<div class="post-meta service-author large-3 medium-3 small-6 columns">
+					<i class="genericon genericon-user"></i>
+					by					<a href="taskerr/author/meloniq/meloniq.html">meloniq <span class="author-posts-qty"><em class="separator">(</em>1<em class="separator">)</em></span></a>				</div>
+				<div class="post-meta service-author-rating large-3 medium-3 small-6 columns">
+					<i class="genericon genericon-star"></i>
+					Rating:										<span>100%</span>
+				</div>
+				<div class="post-meta service-category large-3 medium-3 small-6 columns left">
+					<i class="genericon genericon-category"></i>
+					Category:					<a href="taskerr/services/category/logo-design/logo-design.html">Logo Design</a>				</div>
+
+									<div class="post-meta service-tags large-3 medium-3 small-6 columns">
+						<i class="genericon genericon-tag"></i>
+						Tags:						<span><a href="taskerr/services/tag/design/design.html"><span class="tag">design</span></a><em class="separator">, </em><a href="taskerr/services/tag/graphics/graphics.html"><span class="tag">graphics</span></a><em class="separator">, </em><a href="taskerr/services/tag/logos/logos.html"><span class="tag">logos</span></a></span>
+					</div>
+				
+			</div><!-- end row -->
+
+			
+		</div><!-- end 10-columns -->
+
+		<div class="btn-bar large-2 medium-2 columns">
+
+			<div class="price grey"><span>&#36;</span>29</div>
+				<a href="taskerr/services/add-task/17/17.html" class="button success">
+		<span>Buy</span>
+	</a>
+				<a class="fave-button listing-unfave-link button" href="https://demos.appthemes.com/taskerr?favorite=delete&amp;post_id=17&amp;ajax_nonce=f36f594c49" rel="nofollow"><i class="genericon genericon-unapprove"></i> <span>Delete Favorite</span></a>
+		</div>
+
+	</div><!-- end row -->
+</article>
+
+		
+	
+		
+		<article id="post-52" class="loop-content sticky post-52 service type-service status-publish has-post-thumbnail hentry service_cat-creative-writing-scripting service_cat-reviews service_cat-website-content service_tag-chocolate service_tag-cupcakes service_tag-foo-foos">
+	<div class="row collapse">
+
+		<div class="post-main large-10 medium-10 columns white-con">
+			<div class="features row">
+
+				<div class="person large-3 medium-3 columns">
+						<a class="service-thumbnail" href="taskerr/i-can-lorem-ipsum.html" title="I can Lorem Ipsum">
+		<img width="180" height="180" src="taskerr/files/2014/08/quotes-typography_00403768-180x180.jpg" class="attachment-service-thumbnail size-service-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://demos.appthemes.com/taskerr/files/2014/08/quotes-typography_00403768-180x180.jpg 180w, https://demos.appthemes.com/taskerr/files/2014/08/quotes-typography_00403768-150x150.jpg 150w, https://demos.appthemes.com/taskerr/files/2014/08/quotes-typography_00403768-60x60.jpg 60w" sizes="(max-width: 180px) 100vw, 180px" />	</a>
+	
+											<p class="featured-label">Featured</p>
+					
+					<div class="review-meta column centered">
+							<span class="stars stars-5">
+		<i class="genericon genericon-star good-star"></i><i class="genericon genericon-star good-star"></i><i class="genericon genericon-star good-star"></i><i class="genericon genericon-star good-star"></i><i class="genericon genericon-star good-star"></i>	</span>
+						</div>
+				</div>
+
+				<div class="info large-9 medium-9 columns">
+										<header>
+						<h1><a href="taskerr/i-can-lorem-ipsum.html" rel="bookmark">
+							<span class="featured">
+								I can Lorem Ipsum							</span>
+						</a></h1>
+					</header>
+					
+										<div class="service-description">
+						<p>Gummi bears cheesecake candy canes gingerbread gummies cotton candy caramels.Chocolate wafer powder tiramisu. Candy macaroon muffin lollipop brownie marshmallow wafer. Liquorice tiramisu candy canes cheesecake. Donut marzipan brownie icing jelly ice cream gummies biscuit macaroon. Topping lollipop cookie. Chupa chups oat cake marshmallow oat cake. Halvah cake dragée. Fruitcake gummi bears pie pie cheesecake jelly-o [&hellip;]</p>
+					</div>
+									</div>
+
+			</div>
+
+			<!-- service meta author-->
+			<div class="ft-bar row">
+				<div class="post-meta service-author large-3 medium-3 small-6 columns">
+					<i class="genericon genericon-user"></i>
+					by					<a href="taskerr/author/appthemedemo/appthemedemo.html">AppThemes </a>				</div>
+				<div class="post-meta service-author-rating large-3 medium-3 small-6 columns">
+					<i class="genericon genericon-star"></i>
+					Rating:										<span>90%</span>
+				</div>
+				<div class="post-meta service-category large-3 medium-3 small-6 columns left">
+					<i class="genericon genericon-category"></i>
+					Category:					<a href="taskerr/services/category/creative-writing-scripting/creative-writing-scripting.html">Creative Writing &amp; Scripting</a><em class="separator">, </em><a href="taskerr/services/category/reviews/reviews.html">Reviews</a><em class="separator">, </em><a href="taskerr/services/category/website-content/website-content.html">Website Content</a>				</div>
+
+									<div class="post-meta service-tags large-3 medium-3 small-6 columns">
+						<i class="genericon genericon-tag"></i>
+						Tags:						<span><a href="taskerr/services/tag/chocolate/chocolate.html"><span class="tag">chocolate</span></a><em class="separator">, </em><a href="taskerr/services/tag/cupcakes/cupcakes.html"><span class="tag">Cupcakes</span></a><em class="separator">, </em><a href="taskerr/services/tag/foo-foos/foo-foos.html"><span class="tag">Foo foos</span></a></span>
+					</div>
+				
+			</div><!-- end row -->
+
+			
+		</div><!-- end 10-columns -->
+
+		<div class="btn-bar large-2 medium-2 columns">
+
+			<div class="price grey"><span>&#36;</span>9</div>
+						<a class="fave-button listing-unfave-link button" href="https://demos.appthemes.com/taskerr?favorite=delete&amp;post_id=52&amp;ajax_nonce=3f18b661e4" rel="nofollow"><i class="genericon genericon-unapprove"></i> <span>Delete Favorite</span></a>
+		</div>
+
+	</div><!-- end row -->
+</article>
+
+		
+	
+		
+		<article id="post-96" class="loop-content post-96 service type-service status-publish has-post-thumbnail hentry service_cat-css-html service_cat-databases service_cat-javascript service_cat-joomla-drupal service_cat-php service_cat-programming-tech service_cat-wordpress-programming-tech service_tag-ajax service_tag-css service_tag-html service_tag-javascript-2 service_tag-jquery service_tag-mysql service_tag-php service_tag-web-development">
+	<div class="row collapse">
+
+		<div class="post-main large-10 medium-10 columns white-con">
+			<div class="features row">
+
+				<div class="person large-3 medium-3 columns">
+						<a class="service-thumbnail" href="taskerr/i-can-write-or-fix-php-script-php-code-website-web-site-mysql-css-html-jquery.html" title="I can write or fix PHP script , php code, website, web site, mysql, css, html, jquery">
+		<img width="180" height="180" src="taskerr/files/2014/08/brain-180x180.jpg" class="attachment-service-thumbnail size-service-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://demos.appthemes.com/taskerr/files/2014/08/brain-180x180.jpg 180w, https://demos.appthemes.com/taskerr/files/2014/08/brain-150x150.jpg 150w, https://demos.appthemes.com/taskerr/files/2014/08/brain-60x60.jpg 60w" sizes="(max-width: 180px) 100vw, 180px" />	</a>
+	
+					
+					<div class="review-meta column centered">
+							<span class="stars stars-0">
+		<i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i>	</span>
+						</div>
+				</div>
+
+				<div class="info large-9 medium-9 columns">
+										<header>
+						<h1><a href="taskerr/i-can-write-or-fix-php-script-php-code-website-web-site-mysql-css-html-jquery.html" rel="bookmark">
+							<span class="featured">
+								I can write or fix PHP script , php code, website, web site, mysql, css, html, jquery							</span>
+						</a></h1>
+					</header>
+					
+										<div class="service-description">
+						<p>I have 5 years experience of PHP/MYSQL/jQuery/Ajax/Javascript/CSS/HTML/Web Development. I can write PHP script for you more perfectly and easily within the budget and time frame. I can write, debug, speed up and improve any kind of PHP script. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore [&hellip;]</p>
+					</div>
+									</div>
+
+			</div>
+
+			<!-- service meta author-->
+			<div class="ft-bar row">
+				<div class="post-meta service-author large-3 medium-3 small-6 columns">
+					<i class="genericon genericon-user"></i>
+					by					<a href="taskerr/author/afrolov/afrolov.html">Artem <span class="author-posts-qty"><em class="separator">(</em>3<em class="separator">)</em></span></a>				</div>
+				<div class="post-meta service-author-rating large-3 medium-3 small-6 columns">
+					<i class="genericon genericon-star"></i>
+					Rating:										<span>100%</span>
+				</div>
+				<div class="post-meta service-category large-3 medium-3 small-6 columns left">
+					<i class="genericon genericon-category"></i>
+					Category:					<a href="taskerr/services/category/css-html/css-html.html">CSS &amp; HTML</a><em class="separator">, </em><a href="taskerr/services/category/databases/databases.html">Databases</a><em class="separator">, </em><a href="taskerr/services/category/javascript/javascript.html">JavaScript</a><em class="separator">, </em><a href="taskerr/services/category/joomla-drupal/joomla-drupal.html">Joomla &amp; Drupal</a><em class="separator">, </em><a href="taskerr/services/category/php/php.html">PHP</a><em class="separator">, </em><a href="taskerr/services/category/programming-tech/programming-tech.html">Programming &amp; Tech</a><em class="separator">, </em><a href="taskerr/services/category/wordpress-programming-tech/wordpress-programming-tech.html">WordPress</a>				</div>
+
+									<div class="post-meta service-tags large-3 medium-3 small-6 columns">
+						<i class="genericon genericon-tag"></i>
+						Tags:						<span><a href="taskerr/services/tag/ajax/ajax.html"><span class="tag">Ajax</span></a><em class="separator">, </em><a href="taskerr/services/tag/css/css.html"><span class="tag">CSS</span></a><em class="separator">, </em><a href="taskerr/services/tag/html/html.html"><span class="tag">HTML</span></a><em class="separator">, </em><a href="taskerr/services/tag/javascript-2/javascript-2.html"><span class="tag">Javascript</span></a><em class="separator">, </em><a href="taskerr/services/tag/jquery/jquery.html"><span class="tag">jQuery</span></a><em class="separator">, </em><a href="taskerr/services/tag/mysql/mysql.html"><span class="tag">MYSQL</span></a><em class="separator">, </em><a href="taskerr/services/tag/php/php.html"><span class="tag">PHP</span></a><em class="separator">, </em><a href="taskerr/services/tag/web-development/web-development.html"><span class="tag">Web Development</span></a></span>
+					</div>
+				
+			</div><!-- end row -->
+
+			
+		</div><!-- end 10-columns -->
+
+		<div class="btn-bar large-2 medium-2 columns">
+
+			<div class="price grey"><span>&#36;</span>40</div>
+				<a href="taskerr/services/add-task/96/96.html" class="button success">
+		<span>Buy</span>
+	</a>
+				<a class="fave-button listing-fave-link button" href="https://demos.appthemes.com/taskerr?favorite=add&amp;post_id=96&amp;ajax_nonce=7bf1843dfb" rel="nofollow"><i class="genericon genericon-heart"></i> <span>Favorite</span></a>
+		</div>
+
+	</div><!-- end row -->
+</article>
+
+		
+	
+		
+		<article id="post-94" class="loop-content post-94 service type-service status-publish has-post-thumbnail hentry service_cat-graphics-design service_cat-logo-design service_cat-web-design-ui service_tag-design service_tag-flat service_tag-icons">
+	<div class="row collapse">
+
+		<div class="post-main large-10 medium-10 columns white-con">
+			<div class="features row">
+
+				<div class="person large-3 medium-3 columns">
+						<a class="service-thumbnail" href="taskerr/i-can-design-flat-icon-for-you-app.html" title="I can design FLAT icon for you app">
+		<img width="180" height="180" src="taskerr/files/2014/08/Generic-Icons-e1408988741571-180x180.jpg" class="attachment-service-thumbnail size-service-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://demos.appthemes.com/taskerr/files/2014/08/Generic-Icons-e1408988741571-180x180.jpg 180w, https://demos.appthemes.com/taskerr/files/2014/08/Generic-Icons-e1408988741571-150x150.jpg 150w, https://demos.appthemes.com/taskerr/files/2014/08/Generic-Icons-e1408988741571-60x60.jpg 60w" sizes="(max-width: 180px) 100vw, 180px" />	</a>
+	
+					
+					<div class="review-meta column centered">
+							<span class="stars stars-0">
+		<i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i>	</span>
+						</div>
+				</div>
+
+				<div class="info large-9 medium-9 columns">
+										<header>
+						<h1><a href="taskerr/i-can-design-flat-icon-for-you-app.html" rel="bookmark">
+							<span class="featured">
+								I can design FLAT icon for you app							</span>
+						</a></h1>
+					</header>
+					
+										<div class="service-description">
+						<p>I can design flat modern icons for your app or product. You will get: 256x256px PNG with transparent background Up to 2 modifications Delivery within 5 days Just order a service and describe your icon and&#8230;</p>
+					</div>
+									</div>
+
+			</div>
+
+			<!-- service meta author-->
+			<div class="ft-bar row">
+				<div class="post-meta service-author large-3 medium-3 small-6 columns">
+					<i class="genericon genericon-user"></i>
+					by					<a href="taskerr/author/afrolov/afrolov.html">Artem <span class="author-posts-qty"><em class="separator">(</em>3<em class="separator">)</em></span></a>				</div>
+				<div class="post-meta service-author-rating large-3 medium-3 small-6 columns">
+					<i class="genericon genericon-star"></i>
+					Rating:										<span>100%</span>
+				</div>
+				<div class="post-meta service-category large-3 medium-3 small-6 columns left">
+					<i class="genericon genericon-category"></i>
+					Category:					<a href="taskerr/services/category/graphics-design/graphics-design.html">Graphics &amp; Design</a><em class="separator">, </em><a href="taskerr/services/category/logo-design/logo-design.html">Logo Design</a><em class="separator">, </em><a href="taskerr/services/category/web-design-ui/web-design-ui.html">Web Design &amp; UI</a>				</div>
+
+									<div class="post-meta service-tags large-3 medium-3 small-6 columns">
+						<i class="genericon genericon-tag"></i>
+						Tags:						<span><a href="taskerr/services/tag/design/design.html"><span class="tag">design</span></a><em class="separator">, </em><a href="taskerr/services/tag/flat/flat.html"><span class="tag">flat</span></a><em class="separator">, </em><a href="taskerr/services/tag/icons/icons.html"><span class="tag">icons</span></a></span>
+					</div>
+				
+			</div><!-- end row -->
+
+			
+		</div><!-- end 10-columns -->
+
+		<div class="btn-bar large-2 medium-2 columns">
+
+			<div class="price grey"><span>&#36;</span>15</div>
+				<a href="taskerr/services/add-task/94/94.html" class="button success">
+		<span>Buy</span>
+	</a>
+				<a class="fave-button listing-fave-link button" href="https://demos.appthemes.com/taskerr?favorite=add&amp;post_id=94&amp;ajax_nonce=019fbd2791" rel="nofollow"><i class="genericon genericon-heart"></i> <span>Favorite</span></a>
+		</div>
+
+	</div><!-- end row -->
+</article>
+
+		
+	
+		
+		<article id="post-92" class="loop-content post-92 service type-service status-publish has-post-thumbnail hentry service_cat-copywriting service_cat-writing-translation service_tag-copywriting">
+	<div class="row collapse">
+
+		<div class="post-main large-10 medium-10 columns white-con">
+			<div class="features row">
+
+				<div class="person large-3 medium-3 columns">
+						<a class="service-thumbnail" href="taskerr/i-can-copywrite-you-a-powerful-headline-and-tagline-or-slogan-for-your-business.html" title="I can copywrite you a POWERFUL headline and tagline or slogan for your business">
+		<img width="180" height="180" src="taskerr/files/2014/08/Copywriter-180x180.jpg" class="attachment-service-thumbnail size-service-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://demos.appthemes.com/taskerr/files/2014/08/Copywriter-180x180.jpg 180w, https://demos.appthemes.com/taskerr/files/2014/08/Copywriter-150x150.jpg 150w, https://demos.appthemes.com/taskerr/files/2014/08/Copywriter-60x60.jpg 60w" sizes="(max-width: 180px) 100vw, 180px" />	</a>
+	
+					
+					<div class="review-meta column centered">
+							<span class="stars stars-0">
+		<i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i>	</span>
+						</div>
+				</div>
+
+				<div class="info large-9 medium-9 columns">
+										<header>
+						<h1><a href="taskerr/i-can-copywrite-you-a-powerful-headline-and-tagline-or-slogan-for-your-business.html" rel="bookmark">
+							<span class="featured">
+								I can copywrite you a POWERFUL headline and tagline or slogan for your business							</span>
+						</a></h1>
+					</header>
+					
+										<div class="service-description">
+						<p>Take advantage of my professional copywriting, with this insane deal! I will handcraft you a headline AND tagline (or slogan) for only $5. After 20 years in marketing and broadcasting, my words sell big! Why pay a copywriter 100&#8217;s of dollars? This is for a strict &#8220;my brain to paper&#8221; gig &#8211; one headline and [&hellip;]</p>
+					</div>
+									</div>
+
+			</div>
+
+			<!-- service meta author-->
+			<div class="ft-bar row">
+				<div class="post-meta service-author large-3 medium-3 small-6 columns">
+					<i class="genericon genericon-user"></i>
+					by					<a href="taskerr/author/appthemedemo/appthemedemo.html">AppThemes </a>				</div>
+				<div class="post-meta service-author-rating large-3 medium-3 small-6 columns">
+					<i class="genericon genericon-star"></i>
+					Rating:										<span>90%</span>
+				</div>
+				<div class="post-meta service-category large-3 medium-3 small-6 columns left">
+					<i class="genericon genericon-category"></i>
+					Category:					<a href="taskerr/services/category/copywriting/copywriting.html">Copywriting</a><em class="separator">, </em><a href="taskerr/services/category/writing-translation/writing-translation.html">Writing &amp; Translation</a>				</div>
+
+									<div class="post-meta service-tags large-3 medium-3 small-6 columns">
+						<i class="genericon genericon-tag"></i>
+						Tags:						<span><a href="taskerr/services/tag/copywriting/copywriting.html"><span class="tag">Copywriting</span></a></span>
+					</div>
+				
+			</div><!-- end row -->
+
+			
+		</div><!-- end 10-columns -->
+
+		<div class="btn-bar large-2 medium-2 columns">
+
+			<div class="price grey"><span>&#36;</span>10</div>
+						<a class="fave-button listing-fave-link button" href="https://demos.appthemes.com/taskerr?favorite=add&amp;post_id=92&amp;ajax_nonce=f9f2e20e27" rel="nofollow"><i class="genericon genericon-heart"></i> <span>Favorite</span></a>
+		</div>
+
+	</div><!-- end row -->
+</article>
+
+		
+	
+	
+	
+
+					<!-- pagination -->
+		<div class="row">
+			<div class="pagination-centered">
+				<ul class="pagination"><li class="arrow unavailable prev"><span>&laquo;</span></li><li class="current"><span aria-current="page" class="page-numbers current">1</span></li><li><a class="page-numbers" href="taskerr/page/2/2.html">2</a></li><li class="arrow next"><a class="next page-numbers" href="taskerr/page/2/2.html">&raquo;</a></li></ul>			</div>
+		</div>
+		<!-- /pagination -->
+			
+			
+			
+		</section><!-- end #projects -->
+
+		
+		
+		
+	</main><!-- end #main -->
+
+	<div id="sidebar" class="large-3 medium-4 columns" role="complementary">
+
+		<div class="row"><aside id="appthemes_recent_posts-3" class="widget large-12 columns widget-recent-posts"><h1 class="widgettitle">Recent Services</h1>
+<ul>				<li class="recent-box post-96 service type-service status-publish has-post-thumbnail hentry service_cat-css-html service_cat-databases service_cat-javascript service_cat-joomla-drupal service_cat-php service_cat-programming-tech service_cat-wordpress-programming-tech service_tag-ajax service_tag-css service_tag-html service_tag-javascript-2 service_tag-jquery service_tag-mysql service_tag-php service_tag-web-development">
+
+					<div class="recent-box-thumb left">
+
+						
+							<a href="taskerr/i-can-write-or-fix-php-script-php-code-website-web-site-mysql-css-html-jquery.html" title="I can write or fix PHP script , php code, website, web site, mysql, css, html, jquery" >
+
+								
+									<img width="60" height="60" src="taskerr/files/2014/08/brain-60x60.jpg" class="attachment-recent-posts-widget size-recent-posts-widget wp-post-image" alt="" loading="lazy" srcset="https://demos.appthemes.com/taskerr/files/2014/08/brain-60x60.jpg 60w, https://demos.appthemes.com/taskerr/files/2014/08/brain-150x150.jpg 150w, https://demos.appthemes.com/taskerr/files/2014/08/brain-180x180.jpg 180w" sizes="(max-width: 60px) 100vw, 60px" />
+								
+							</a>
+
+						
+													<div class="recent-stars">
+									<span class="stars stars-0">
+		<i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i>	</span>
+								</div>
+						
+						</div><!-- end recent-box-thumb -->
+
+
+
+					<div class="recent-box-content">
+
+						<h2 class="recent-box-title">
+							<a href="taskerr/i-can-write-or-fix-php-script-php-code-website-web-site-mysql-css-html-jquery.html" rel="bookmark" title="I can write or fix PHP script , php code, website, web site, mysql, css, html, jquery">
+								I can write or fix PHP script , php code, website, web site, mysql, css, html, jquery							</a>
+						</h2>
+
+						
+						
+						<span class="recent-post-date clearfix">
+							by&nbsp;<a href="taskerr/author/afrolov/afrolov.html">Artem <span class="author-posts-qty"><em class="separator">(</em>3<em class="separator">)</em></span></a>&nbsp;on&nbsp;August 25, 2014						</span>
+					</div>
+				</li><!-- end recent-box -->				<li class="recent-box post-94 service type-service status-publish has-post-thumbnail hentry service_cat-graphics-design service_cat-logo-design service_cat-web-design-ui service_tag-design service_tag-flat service_tag-icons">
+
+					<div class="recent-box-thumb left">
+
+						
+							<a href="taskerr/i-can-design-flat-icon-for-you-app.html" title="I can design FLAT icon for you app" >
+
+								
+									<img width="60" height="60" src="taskerr/files/2014/08/Generic-Icons-e1408988741571-60x60.jpg" class="attachment-recent-posts-widget size-recent-posts-widget wp-post-image" alt="" loading="lazy" srcset="https://demos.appthemes.com/taskerr/files/2014/08/Generic-Icons-e1408988741571-60x60.jpg 60w, https://demos.appthemes.com/taskerr/files/2014/08/Generic-Icons-e1408988741571-150x150.jpg 150w, https://demos.appthemes.com/taskerr/files/2014/08/Generic-Icons-e1408988741571-180x180.jpg 180w" sizes="(max-width: 60px) 100vw, 60px" />
+								
+							</a>
+
+						
+													<div class="recent-stars">
+									<span class="stars stars-0">
+		<i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i>	</span>
+								</div>
+						
+						</div><!-- end recent-box-thumb -->
+
+
+
+					<div class="recent-box-content">
+
+						<h2 class="recent-box-title">
+							<a href="taskerr/i-can-design-flat-icon-for-you-app.html" rel="bookmark" title="I can design FLAT icon for you app">
+								I can design FLAT icon for you app							</a>
+						</h2>
+
+						
+						
+						<span class="recent-post-date clearfix">
+							by&nbsp;<a href="taskerr/author/afrolov/afrolov.html">Artem <span class="author-posts-qty"><em class="separator">(</em>3<em class="separator">)</em></span></a>&nbsp;on&nbsp;August 25, 2014						</span>
+					</div>
+				</li><!-- end recent-box -->				<li class="recent-box post-92 service type-service status-publish has-post-thumbnail hentry service_cat-copywriting service_cat-writing-translation service_tag-copywriting">
+
+					<div class="recent-box-thumb left">
+
+						
+							<a href="taskerr/i-can-copywrite-you-a-powerful-headline-and-tagline-or-slogan-for-your-business.html" title="I can copywrite you a POWERFUL headline and tagline or slogan for your business" >
+
+								
+									<img width="60" height="60" src="taskerr/files/2014/08/Copywriter-60x60.jpg" class="attachment-recent-posts-widget size-recent-posts-widget wp-post-image" alt="" loading="lazy" srcset="https://demos.appthemes.com/taskerr/files/2014/08/Copywriter-60x60.jpg 60w, https://demos.appthemes.com/taskerr/files/2014/08/Copywriter-150x150.jpg 150w, https://demos.appthemes.com/taskerr/files/2014/08/Copywriter-180x180.jpg 180w" sizes="(max-width: 60px) 100vw, 60px" />
+								
+							</a>
+
+						
+													<div class="recent-stars">
+									<span class="stars stars-0">
+		<i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i>	</span>
+								</div>
+						
+						</div><!-- end recent-box-thumb -->
+
+
+
+					<div class="recent-box-content">
+
+						<h2 class="recent-box-title">
+							<a href="taskerr/i-can-copywrite-you-a-powerful-headline-and-tagline-or-slogan-for-your-business.html" rel="bookmark" title="I can copywrite you a POWERFUL headline and tagline or slogan for your business">
+								I can copywrite you a POWERFUL headline and tagline or slogan for your business							</a>
+						</h2>
+
+						
+						
+						<span class="recent-post-date clearfix">
+							by&nbsp;<a href="taskerr/author/appthemedemo/appthemedemo.html">AppThemes </a>&nbsp;on&nbsp;August 25, 2014						</span>
+					</div>
+				</li><!-- end recent-box --></ul></aside></div><div class="row"><aside id="tr_taxonomy_list-5" class="widget large-12 columns widget-taxonomy-list"><h1 class="widgettitle">Categories</h1>
+<a href="taskerr/page/1/taskerr.html#" class="cat-down button"><i class="genericon genericon-expand"></i><span>Expand/Collapse</span></a><div class="catcol"><ul class="maincat-list small-block-grid-1 medium-block-grid-1 large-block-grid-1"><li class="maincat cat-item-24"><a href="taskerr/services/category/business/business.html" title="">Business</a> <span class="cat-item-count">(2)</span> </li>
+<li class="maincat cat-item-17"><a href="taskerr/services/category/graphics-design/graphics-design.html" title="">Graphics &amp; Design</a> <span class="cat-item-count">(2)</span> </li>
+<li class="maincat cat-item-18"><a href="taskerr/services/category/online-marketing/online-marketing.html" title="">Online Marketing</a> <span class="cat-item-count">(1)</span> </li>
+<li class="maincat cat-item-22"><a href="taskerr/services/category/programming-tech/programming-tech.html" title="">Programming &amp; Tech</a> <span class="cat-item-count">(3)</span> </li>
+<li class="maincat cat-item-19"><a href="taskerr/services/category/writing-translation/writing-translation.html" title="">Writing &amp; Translation</a> <span class="cat-item-count">(2)</span> </li>
+</ul>
+</div><!-- /catcol -->
+</aside></div><div class="row"><aside id="appthemes_facebook-3" class="widget large-12 columns widget-facebook"><h1 class="widgettitle">Facebook Friends</h1>
+
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=235643263204884";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+
+			<div class="fb-page" data-href="https://www.facebook.com/appthemes"  data-width = "310"   data-height = "290"   data-hide-cover = "false"   data-show-facepile = "true"   data-show-posts = "false"   data-hide-cta = "false"   data-small-header = "false"   data-adapt-container-width = "true"   >
+			<div class="fb-xfbml-parse-ignore">
+				<blockquote cite="https://www.facebook.com/appthemes">
+					<a href="https://www.facebook.com/appthemes">Facebook Friends</a>
+				</blockquote>
+			</div>
+		</div>
+	</aside></div><div class="row"><aside id="tr_125_ads-4" class="widget large-12 columns widget-125-ads"><h1 class="widgettitle">Sponsored Ads</h1>
+<ul class="ads"><li class="white-con"><a href="https://www.appthemes.com/?aid=13354" rel="nofollow" target="_self"><img src="ads/125x125a.gif" width="125" height="125" alt="AppThemes - Premium WordPress Themes" /></a></li> <li class="white-con"><a href="https://demos.appthemes.com/taskerr/%22https:/www.appthemes.com/themes/ideas?aid=13354" rel="nofollow" target="_self"><img src="wp-content/uploads/2012/11/appthemes-ideas-feedback-125x125.png" width="125" height="125" alt="AppThemes Ideas - A customer feedback theme for WordPress" /></a></li> <li class="white-con"><a href="https://www.appthemes.com/themes/classipress/?aid=13354" rel="nofollow" target="_self"><img src="ads/cp-125x125a.gif" width="125" height="125" alt="ClassiPress - Premium Classified Ads Theme" /></a></li> <li class="white-con"><a href="https://www.appthemes.com/themes/vantage/?aid=13354" rel="nofollow" target="_self"><img src="wp-content/uploads/2012/05/appthemes-vantage-money-125x125.png" width="125" height="125" alt="AppThemes Vantage - a business directory theme for WordPress" /></a></li> </ul></aside></div>
+	</div><!-- end #sidebar -->
+
+</div><!-- end row -->	</div><!-- /CONTENT -->
+
+	
+	<!-- FOOTER -->
+	<footer id="footer" role="contentinfo">
+				<!-- Footer Widgets -->
+				<div class="row widgets-footer">
+			<div class="large-12 columns">
+				<ul class="small-block-grid-2 medium-block-grid-4 large-block-grid-4">
+					<li id="text-11" class="widget widget_text"><aside><h2 class="widgettitle">About Taskerr</h2>
+			<div class="textwidget"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+		</aside></li><li id="pages-2" class="widget widget_pages"><aside><h2 class="widgettitle">Navigation</h2>
+
+			<ul>
+				<li class="page_item page-item-4"><a href="taskerr/blog/blog.html">Blog</a></li>
+<li class="page_item page-item-7"><a href="taskerr/dashboard.html">Dashboard</a></li>
+<li class="page_item page-item-5"><a href="taskerr/edit-profile/edit-profile.html">Edit Profile</a></li>
+<li class="page_item page-item-18"><a href="taskerr/how-things-work.html">How Things Work</a></li>
+			</ul>
+
+			</aside></li>
+		<li id="recent-posts-5" class="widget widget_recent_entries"><aside>
+		<h2 class="widgettitle">Recent Posts</h2>
+
+		<ul>
+											<li>
+					<a href="taskerr/image-alignment.html">Image Alignment</a>
+											<span class="post-date">August 22, 2014</span>
+									</li>
+											<li>
+					<a href="taskerr/html-tags-and-formatting.html">Formatting</a>
+											<span class="post-date">August 22, 2014</span>
+									</li>
+											<li>
+					<a href="taskerr/lorem-ipsum.html">Lorem Ipsum</a>
+											<span class="post-date">August 22, 2014</span>
+									</li>
+											<li>
+					<a href="taskerr/hello-world.html">Hello world!</a>
+											<span class="post-date">June 7, 2014</span>
+									</li>
+					</ul>
+
+		</aside></li><li id="rss-2" class="widget widget_rss"><aside><h2 class="widgettitle"><a class="rsswidget" href="https://feeds.feedburner.com/AppThemes/"><img class="rss-widget-icon" style="border:0" width="14" height="14" src="taskerr/wp-includes/images/rss.png" alt="RSS" /></a> <a class="rsswidget" href="www_appthemes_default_2.html">RSS</a></h2>
+<ul><li><a class='rsswidget' href='http://feedproxy.google.com/~r/appthemes/~3/BQw0N2RARv4/'>Introducing ClassiPress Version 4.2.0</a></li><li><a class='rsswidget' href='http://feedproxy.google.com/~r/appthemes/~3/76Ck7sj5fxo/'>Show Casing Market Stalls for an Event Using Vantage</a></li><li><a class='rsswidget' href='http://feedproxy.google.com/~r/appthemes/~3/XLSkwFd4wNE/'>JobRoller Version 1.9.1</a></li></ul></aside></li>				</ul>
+			</div>
+		</div>
+		<!-- End footer Widgets -->
+		
+		  <!-- Footer -->
+		<div class="row">
+			<div class="large-12 columns">
+				<p class="copy"><a href="themes/taskerr/taskerr.html" target="_blank" rel="nofollow">Taskerr Theme</a> - Powered by <a href="https://wordpress.org/" target="_blank" rel="nofollow">WordPress</a></p>
+			</div>
+		</div>
+	</footer><!-- /FOOTER -->
+
+	
+	
+	<script type='text/javascript' src='taskerr/wp-content/themes/taskerr/foundation/js/vendor/fastclick.js' id='tr-fastclick-js'></script>
+<script type='text/javascript' src='taskerr/wp-content/themes/taskerr/foundation/js/foundation.min.js' id='tr-foundation-scripts-js'></script>
+<script type='text/javascript' id='main-js-extra'>
+/* <![CDATA[ */
+var Taskerr = {"ajaxurl":"https:\/\/demos.appthemes.com\/taskerr\/wp-admin\/admin-ajax.php","current_url":"https:\/\/demos.appthemes.com\/taskerr\/"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='taskerr/wp-content/themes/taskerr/scripts/scripts.js' id='main-js'></script>
+<script type='text/javascript' src='taskerr/wp-includes/js/wp-embed.min.js' id='wp-embed-js'></script>
+
+		<script>
+		jQuery(document).foundation({topbar: {stickyClass: 'sticky-top-bar'}});
+	</script>
+
+</body>
+</html>
