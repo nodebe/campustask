@@ -48,30 +48,12 @@
 			clip: rect(1px, 1px, 1px, 1px);
 		}
 		</style>
-	<style type="text/css" id="custom-background-css">
-body.custom-background { background-image: url("https://demos.appthemes.com/taskerr/wp-content/themes/taskerr/img/bg_body.png"); background-position: left top; background-size: auto; background-repeat: repeat; background-attachment: fixed; }
-</style>
-<link rel="icon" href="../static/img/favicon.ico" sizes="32x32" />
-<link rel="icon" href="../static/img/favicon.ico" sizes="192x192" />
-<link rel="apple-touch-icon" href="../static/img/favicon.ico" />
 
-<script type="text/javascript">
-  //<![CDATA[
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-74957-32']);
-  _gaq.push(['_setDomainName', 'appthemes.com']);
-  _gaq.push(['_trackPageview']);
+<link rel="icon" href="../static/img/favicon.png" sizes="32x32" />
+<link rel="icon" href="../static/img/favicon.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="../static/img/favicon.png" />
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-  //]]>
-</script>
-
-
-	<link rel="stylesheet" type="text/css" media="all" href="../static/css/style.css" />
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/style.css" />
 
 	</head>
 
@@ -237,17 +219,22 @@ body.custom-background { background-image: url("https://demos.appthemes.com/task
 	
 	<!-- WIDGETIZED AREA -->
 	<div id="top-widgets" role="complementary">
-				<!-- widgetized area below navbar -->
-		
-		
-				</div><!-- /WIDGETIZED AREA -->
+	<!-- widgetized area below navbar -->
+	{% block widget %}
+
+	{% endblock widget %}
+	</div><!-- /WIDGETIZED AREA -->
 
 	<!-- CONTENT -->
 	<div id="content">
 		<div class="archive-row row">
         {% include 'includes/_messages.html' %}
+        {% block body %}
 
-
+        {% endblock %}
+        {% block test %}
+        <p>How you dey</p>
+        {% endblock %}
 	<!-- Begin side bar -->
 
 	<!-- <div id="sidebar" class="large-3 medium-4 columns dashboard-side" role="complementary">
@@ -435,7 +422,7 @@ body.custom-background { background-image: url("https://demos.appthemes.com/task
 
 	
 	
-	<script type='text/javascript' src='../static/js/fastclick.js' id='tr-fastclick-js'></script>
+<script type='text/javascript' src='../static/js/fastclick.js' id='tr-fastclick-js'></script>
 <script type='text/javascript' src='../static/js/foundation.min.js' id='tr-foundation-scripts-js'></script>
 <script type='text/javascript' src='../static/js/dashboard.js' id='tr-dashboard-js'></script>
 <script type='text/javascript' src='../static/js/scripts.js' id='main-js'></script>
