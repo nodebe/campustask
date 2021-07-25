@@ -1,688 +1,92 @@
-<!DOCTYPE html>
-<!--[if lt IE 7 ]> <html class="ie6" lang="en-US"> <![endif]-->
-<!--[if IE 7 ]>    <html class="ie7" lang="en-US"> <![endif]-->
-<!--[if IE 8 ]>    <html class="ie8" lang="en-US"> <![endif]-->
-<!--[if IE 9 ]>    <html class="ie9" lang="en-US"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en-US"> <!--<![endif]-->
-<head>
-	<meta charset="UTF-8" />
-
-	<title>  Edit Profile</title>
-
-	<link rel="profile" href="http://gmpg.org/xfn/11" />
-	<link rel="pingback" href="https://demos.appthemes.com/taskerr/xmlrpc.php" />
-
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-	<link rel='dns-prefetch' href='https://fonts.googleapis.com/' />
-<link rel='dns-prefetch' href='https://s.w.org/' />
-<link rel="alternate" type="application/rss+xml" title="Taskerr Demo &raquo; Feed" href="../feed/feed.html" />
-<link rel="alternate" type="application/rss+xml" title="Taskerr Demo &raquo; Comments Feed" href="../comments/feed/feed.html" />
-		<script type="text/javascript">
-			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/demos.appthemes.com\/taskerr\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.5"}};
-			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
-		</script>
-		<style type="text/css">
-img.wp-smiley,
-img.emoji {
-	display: inline !important;
-	border: none !important;
-	box-shadow: none !important;
-	height: 1em !important;
-	width: 1em !important;
-	margin: 0 .07em !important;
-	vertical-align: -0.1em !important;
-	background: none !important;
-	padding: 0 !important;
-}
-</style>
-	<link rel='stylesheet' id='wp-block-library-css'  href='../wp-includes/css/dist/block-library/style.min.css' type='text/css' media='all' />
-<link rel='stylesheet' id='googleFonts-css'  href='https://fonts.googleapis.com/css?family=Lato%3A300,400,700,900,400italic%7CNoto+Serif&amp;ver=1.3.4' type='text/css' media='all' />
-<link rel='stylesheet' id='genericons-css'  href='../wp-content/themes/taskerr/styles/genericons/genericons.css' type='text/css' media='all' />
-<link rel='stylesheet' id='tr-normalize-css'  href='../wp-content/themes/taskerr/foundation/css/normalize.css' type='text/css' media='all' />
-<link rel='stylesheet' id='tr-foundation-styles-css'  href='../wp-content/themes/taskerr/foundation/css/foundation.min.css' type='text/css' media='all' />
-<link rel='stylesheet' id='tr-color-css'  href='../wp-content/themes/taskerr/styles/blue.css' type='text/css' media='all' />
-<link rel='stylesheet' id='app-slider-style-css'  href='../wp-content/themes/taskerr/includes/slider/slider.css' type='text/css' media='all' />
-<link rel='stylesheet' id='appthemes_recent_posts-css'  href='../wp-content/themes/taskerr/includes/widgets/styles/widget-recent-posts.css' type='text/css' media='all' />
-<script type='text/javascript' src='../wp-content/themes/taskerr/foundation/js/vendor/modernizr.js' id='tr-modernizr-js'></script>
-<script type='text/javascript' src='../wp-includes/js/jquery/jquery.js' id='jquery-js'></script>
-<script type='text/javascript' id='jquery-js-after'>
-var AppThemes = {"ajaxurl":"\/taskerr\/wp-admin\/admin-ajax.php","current_url":"https:\/\/demos.appthemes.com\/taskerr\/edit-profile\/"};
-</script>
-<script type='text/javascript' id='zxcvbn-async-js-extra'>
-/* <![CDATA[ */
-var _zxcvbnSettings = {"src":"https:\/\/demos.appthemes.com\/taskerr\/wp-includes\/js\/zxcvbn.min.js"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='../wp-includes/js/zxcvbn-async.min.js' id='zxcvbn-async-js'></script>
-<script type='text/javascript' src='../wp-includes/js/dist/vendor/wp-polyfill.min.js' id='wp-polyfill-js'></script>
-<script type='text/javascript' id='wp-polyfill-js-after'>
-( 'fetch' in window ) || document.write( '<script src="../wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js"></scr' + 'ipt>' );( document.contains ) || document.write( '<script src="../wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js"></scr' + 'ipt>' );( window.DOMRect ) || document.write( '<script src="../wp-includes/js/dist/vendor/wp-polyfill-dom-rect.min.js"></scr' + 'ipt>' );( window.URL && window.URL.prototype && window.URLSearchParams ) || document.write( '<script src="../wp-includes/js/dist/vendor/wp-polyfill-url.min.js"></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script src="../wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js"></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script src="../wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js"></scr' + 'ipt>' );
-</script>
-<script type='text/javascript' src='../wp-includes/js/dist/i18n.min.js' id='wp-i18n-js'></script>
-<script type='text/javascript' id='password-strength-meter-js-extra'>
-/* <![CDATA[ */
-var pwsL10n = {"unknown":"Password strength unknown","short":"Very weak","bad":"Weak","good":"Medium","strong":"Strong","mismatch":"Mismatch"};
-/* ]]> */
-</script>
-<script type='text/javascript' id='password-strength-meter-js-translations'>
-( function( domain, translations ) {
-	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
-	localeData[""].domain = domain;
-	wp.i18n.setLocaleData( localeData, domain );
-} )( "default", { "locale_data": { "messages": { "": {} } } } );
-</script>
-<script type='text/javascript' src='../wp-admin/js/password-strength-meter.min.js' id='password-strength-meter-js'></script>
-<script type='text/javascript' src='../wp-includes/js/underscore.min.js' id='underscore-js'></script>
-<script type='text/javascript' id='wp-util-js-extra'>
-/* <![CDATA[ */
-var _wpUtilSettings = {"ajax":{"url":"\/taskerr\/wp-admin\/admin-ajax.php"}};
-/* ]]> */
-</script>
-<script type='text/javascript' src='../wp-includes/js/wp-util.min.js' id='wp-util-js'></script>
-<script type='text/javascript' id='user-profile-js-translations'>
-( function( domain, translations ) {
-	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
-	localeData[""].domain = domain;
-	wp.i18n.setLocaleData( localeData, domain );
-} )( "default", { "locale_data": { "messages": { "": {} } } } );
-</script>
-<script type='text/javascript' src='../wp-admin/js/user-profile.min.js' id='user-profile-js'></script>
-<script type='text/javascript' src='../wp-content/themes/taskerr/theme-framework/js/profile.js' id='app-user-profile-js'></script>
-<link rel="https://api.w.org/" href="../wp-json/wp-json.json" /><link rel="alternate" type="application/json" href="../wp-json/wp/v2/pages/5.json" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://demos.appthemes.com/taskerr/xmlrpc.php?rsd" />
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
-<meta name="generator" content="WordPress 5.5" />
-<link rel="canonical" href="edit-profile.html" />
-<link rel='shortlink' href='https://demos.appthemes.com/taskerr/?p=5' />
-<link rel="alternate" type="application/json+oembed" href="../wp-json/oembed/1.0/embed_4.json" />
-<link rel="alternate" type="text/xml+oembed" href="../wp-json/oembed/1.0/embed_5.xml" />
-<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>	<style type="text/css" id="twentytwelve-header-css">
-			.site-title,
-		.site-description {
-			position: absolute;
-			clip: rect(1px 1px 1px 1px); /* IE7 */
-			clip: rect(1px, 1px, 1px, 1px);
-		}
-		</style>
-	<style type="text/css" id="custom-background-css">
-body.custom-background { background-image: url("https://demos.appthemes.com/taskerr/wp-content/themes/taskerr/img/bg_body.png"); background-position: left top; background-size: auto; background-repeat: repeat; background-attachment: fixed; }
-</style>
-	<link rel="icon" href="../wp-content/themes/taskerr/favicon.ico" sizes="32x32" />
-<link rel="icon" href="../wp-content/themes/taskerr/favicon.ico" sizes="192x192" />
-<link rel="apple-touch-icon" href="../wp-content/themes/taskerr/favicon.ico" />
-<meta name="msapplication-TileImage" content="https://demos.appthemes.com/taskerr/wp-content/themes/taskerr/favicon.ico?ver=1.3.4" />
-<script type="text/javascript">
-  //<![CDATA[
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-74957-32']);
-  _gaq.push(['_setDomainName', 'appthemes.com']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-  //]]>
-</script>
-
-
-	<link rel="stylesheet" type="text/css" media="all" href="../wp-content/themes/taskerr/style.css" />
-
-	</head>
-
-<body class="page-template page-template-edit-profile page-template-edit-profile-php page page-id-5 logged-in custom-background no-js" itemscope itemtype="http://schema.org/WebPage">
-
-	<script type="text/javascript">
-		document.body.className = document.body.className.replace('no-js','js');
-	</script>
-
-	
-	
-	<!-- HEADER -->
-	<header id="header" role="banner">
-				<div class="row">
-			<div class="large-10 large-centered columns">
-							</div><!-- end columns -->
-		</div><!-- end row -->
-
-		<div class="row">
-			<div class="large-12 columns">
-				
-		<div id="top-bar-1" class="top-bar" data-topbar>
-  			<ul class="title-area">
-				<!-- Title Area -->
-				<li class="name">
-					<ul class="social-bar left">
-													<li>
-								<a href="https://facebook.com/appthemes" title="Facebook">
-									<i class="genericon genericon-facebook"></i>
-									<span>Facebook</span>
-								</a>
-							</li>
-													<li>
-								<a href="https://twitter.com/appthemes" title="Twitter">
-									<i class="genericon genericon-twitter"></i>
-									<span>Twitter</span>
-								</a>
-							</li>
-												<li>
-							<a href="../feed/feed_2.html" title="RSS">
-								<i class="genericon genericon-feed"></i>
-								<span>RSS</span>
-							</a>
-						</li>
-					</ul>
-
-				</li>
-    			<li class="toggle-topbar menu-icon">
-					<a href="edit-profile.html#"><span>Menu</span></a>
-				</li>
-  			</ul>
-			<section class="top-bar-section">
-				<!-- Right Nav Section -->
-				<ul class="right">
-
-											<li>
-							<a href="../favorites.html" title="Favorites">
-								<i class="genericon genericon-heart"></i>
-								<span class="hide-for-medium-only">Favorites</span>
-							</a>
-						</li>
-						<li class="inbox-btn has-dropdown unread-inbox-btn">
-							<a href="../dashboard/notifications/page/1/notifications.html" title="Notifications">
-								<i class="genericon genericon-subscribed"></i>
-								<span class="hide-for-medium-only">Notifications&nbsp;(<span class="unread-inbox">2</span>)</span>
-							</a>
-																				<ul id="notifications-dropdown" class="dropdown">
-								<li class="dropdown-label"><label>Unread notifications</label></li>
-																			<li><a class="notifications-node" href="../dashboard/notifications/page/1/notifications.html#1-53f778fbc9091-1408727291">
-												<span class="notification-date">
-													August 22, 2014 5:08 pm												</span>
-												&nbsp;&mdash;&nbsp;
-												<span class="notification-message">
-													Your review on - AppThemes - was sent to meloniq												</span>
-										</a></li>
-																			<li><a class="notifications-node" href="../dashboard/notifications/page/1/notifications.html#1-53f77337c1b32-1408725815">
-												<span class="notification-date">
-													August 22, 2014 4:43 pm												</span>
-												&nbsp;&mdash;&nbsp;
-												<span class="notification-message">
-													meloniq has marked task #6 - as Paid												</span>
-										</a></li>
-																	<li class="divider"></li>
-								<li><a class="notifications-node" href="../dashboard/notifications/page/1/notifications.html">See all &rarr;</a></li>
-							</ul>
-												</li>
-						<li>
-							<a href="edit-profile.html" title="Your Profile">
-								<i class="genericon genericon-user"></i>
-								<span class="hide-for-medium-only">Your Profile</span>
-							</a>
-						</li>
-						<li>
-							<a href="../dashboard.html" title="Dashboard">
-								<i class="genericon genericon-cog"></i>
-								<span class="hide-for-medium-only">Dashboard</span>
-							</a>
-						</li>
-						<li>
-							<a href="https://demos.appthemes.com/taskerr/wp-login.php?action=logout&#038;_wpnonce=20f58b72c5" title="Logout">
-								<i class="genericon genericon-key"></i>
-								<span class="hide-for-medium-only">Logout</span>
-							</a>
-						</li>
-
-									</ul>
-			</section>
-		</div>			</div><!-- end columns -->
-		</div><!-- end row -->
-
-		<div class="row">
-			<div class="large-12 columns site-header">
-				<div class="clearfix">
-					<h1 class="site-title left"><a href="../page/1/taskerr.html" title="Taskerr Demo" rel="home">Taskerr Demo</a></h1>
-					<h2 class="site-description right">Just another AppThemes Demos Sites site</h2>
-				</div>
-
-									<a class="site-logo" href="../page/1/taskerr.html">
-						<img src="../wp-content/themes/taskerr/img/logo-red-clock.png" class="header-image" width="151" height="27" alt="" />
-					</a>
-				
-						<nav id="top-bar-2" class="top-bar" data-topbar>
-			<ul class="title-area">
-				<li class="name"></li>
-				<li class="toggle-topbar menu-icon">
-					<a href="edit-profile.html#">
-						<span>Navigation</span>
-					</a>
-
-			</ul>
-
-			<section class="top-bar-section">
-				<!-- Right Nav Section -->
-				<ul class="right">
-					<li class="has-form">
-						<div class="row collapse">
-							<div class="search-bar large-12 columns">
-										<form role="search" method="get" id="searchform" class="searchform" action="../page/1/taskerr.html">
-			<div class="right">
-				<button value="Search" type="submit" title="Search">
-					<i class="genericon genericon-search"></i>
-					<span>Search</span>
-				</button>
-			</div>
-			<div class="search-input">
-				<input type="text" id="s" name="s" placeholder="Search" value="" />
-			</div>
-		</form>							</div>
-						</div>
-					</li>
-				</ul>
-
-				<!-- Left Nav Section -->
-				<ul id="menu-header" class="left"><li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a href="../add-service.html">Add Service</a></li>
-<li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="../how-things-work.html">How Things Work</a></li>
-<li id="menu-item-57" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57"><a href="../blog/blog.html">Blog</a></li>
-</ul>
-			</section>
-		</nav>			</div><!-- end columns -->
-		</div><!-- end row -->	</header><!-- /HEADER -->
-
-	
-	<!-- WIDGETIZED AREA -->
-	<div id="top-widgets" role="complementary">
-				<!-- widgetized area below navbar -->
-		
-		
-				</div><!-- /WIDGETIZED AREA -->
-
+{% extends 'layout.html' %}
 	<!-- CONTENT -->
-	<div id="content">
-		<section>
+<div id="content">
+	<section>
+	{% block head %}
 	<header>
 		<div class="singular-headline">
-							<div class="row">
-		<div class="large-12 columns">
-							<h1>Edit Profile</h1>
-					</div>
-	</div>					</div>
+			<div class="row">
+				<div class="large-12 columns">
+					<h1>Edit Profile</h1>
+				</div>
+			</div>
+		</div>
 	</header>
-
+	{% endblock head %}
 	<div class="singular-row row">
-
-		
+		{% block body %}
 		<main id="main" class="large-9 medium-8 columns" role="main">
+			<div id="post-5" class="post-5 page type-page status-publish hentry">
+				<div id="overview" class="single-content white-con">
+					<div class="post-info">
+						<form id="login-form" method="post" action="{{url_for('users.userprofile', form_type='profile')}}">
+							{{ form.hidden_tag() }}
+							{% from 'includes/_formhelpers.html' import render_field  %}
+							<fieldset>
+								<div class="form-field">
+										<label>Username: <input type="text" name="log" class="text regular-text required" tabindex="2" id="login_username" value="{{ current_user.username }}" disabled /></label>
 
-			
-			
-				
-				<div id="post-5" class="post-5 page type-page status-publish hentry">
-					<div id="overview" class="single-content white-con">
-						<div class="post-info">
-														
-							
-								<form name="profile" id="login-form" action="edit-profile.html" method="post" enctype="multipart/form-data">
-		<input type="hidden" id="_wpnonce" name="_wpnonce" value="b225d06488" /><input type="hidden" name="_wp_http_referer" value="/taskerr/edit-profile/" />
-		<input type="hidden" name="from" value="profile" />
-		<input type="hidden" name="checkuser_id" value="1" />
-
-		<fieldset>
-			<div class="form-field">
-				<label>
-					Username:					<input type="text" name="user_login" class="text regular-text" id="user_login" value="appthemedemo" maxlength="100" disabled />
-				</label>
+								</div>
+								<div class="form-field">
+										{{ render_field(form.firstname, class_="text regular-text required", tabindex = "2")}}
+								</div>
+								<div class="form-field">
+										{{ render_field(form.lastname, class_="text regular-text required", tabindex = "2")}}
+								</div>
+								<div class="form-field">
+									{{ render_field(form.email, class_="text regular-text required", tabindex = "2")}}
+								</div>
+								<div class="form-field">
+									{{ render_field(form.phone, class_="text regular-text required", tabindex = "2")}}
+								</div>
+								<div class="form-field">
+									{{ render_field(form.campus, class_="text regular-text required", tabindex = "2")}}
+								</div>
+								<div class="form-field">
+									<input type="submit" value="Update Profile">
+								</div>
+							</fieldset>
+						</form>
+					</div>
+				</div>
 			</div>
-			<div class="form-field">
-				<label>
-					Nickname:					<input type="text" name="nickname" class="text regular-text required" id="nickname" value="appthemedemo" maxlength="100" />
-				</label>
-			</div>
-			<div class="form-field">
-				<label>
-					Display Name:					<input type="text" name="display_name" class="text regular-text" id="display_name" value="AppThemes" maxlength="100" />
-				</label>
-			</div>
-			<div class="form-field">
-				<label>
-					Email:					<input type="text" name="email" class="text regular-text" id="email" value="demo@appthemes.com" maxlength="100" />
-				</label>
-			</div>
-
-							<div class="form-field">
-					<label for="aim">AIM:</label>
-					<input type="text" name="aim" id="aim" value="" class="regular-text" />
-				</div>
-							<div class="form-field">
-					<label for="yim">Yahoo IM:</label>
-					<input type="text" name="yim" id="yim" value="" class="regular-text" />
-				</div>
-							<div class="form-field">
-					<label for="jabber">Jabber / Google Talk:</label>
-					<input type="text" name="jabber" id="jabber" value="" class="regular-text" />
-				</div>
-							<div class="form-field">
-					<label for="facebook">Facebook:</label>
-					<input type="text" name="facebook" id="facebook" value="appthemes" class="regular-text" />
-				</div>
-							<div class="form-field">
-					<label for="twitter">Twitter:</label>
-					<input type="text" name="twitter" id="twitter" value="appthemes" class="regular-text" />
-				</div>
-							<div class="form-field">
-					<label for="pinterest">Pinterest:</label>
-					<input type="text" name="pinterest" id="pinterest" value="" class="regular-text" />
-				</div>
-							<div class="form-field">
-					<label for="tumblr">Tumblr:</label>
-					<input type="text" name="tumblr" id="tumblr" value="" class="regular-text" />
-				</div>
-							<div class="form-field">
-					<label for="instagram">Instagram:</label>
-					<input type="text" name="instagram" id="instagram" value="" class="regular-text" />
-				</div>
-			
-			<div class="form-field">
-				<label>
-					Website:					<input type="text" name="url" class="text regular-text" id="url" value="https://www.appthemes.com" maxlength="100" />
-				</label>
-			</div>
-			<div class="form-field">
-				<label>
-					About Me:					<textarea name="description" class="text regular-text" id="description" rows="10" cols="50">I'm a make believe user that only exists for testing purposes.
-
-Maecenas nec est libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
-
-Quisque nisl justo, posuere interdum porta nec, laoreet eget massa. Morbi vitae lacus ultricies, faucibus elit at, cursus erat.</textarea>
-				</label>
-			</div>
-
-			<h3>Email Notifications Settings</h3><div class="form-field"><span class="form-field-title">Receive email notifications:</span><label><input checked="checked" name="notifications[]" value="new_service_author" type="checkbox" /> You have created a new service</label>
-<label><input checked="checked" name="notifications[]" value="service_approval" type="checkbox" /> Your Service listing has been approved</label>
-<label><input checked="checked" name="notifications[]" value="service_expired" type="checkbox" /> Your Service listing has expired</label>
-<label><input checked="checked" name="notifications[]" value="new_review" type="checkbox" /> You have sent a new review</label>
-<label><input checked="checked" name="notifications[]" value="task_created_provider" type="checkbox" /> A user has ordered your service</label>
-<label><input checked="checked" name="notifications[]" value="task_created_buyer" type="checkbox" /> You have ordered a new service</label>
-<label><input checked="checked" name="notifications[]" value="task_paid_provider" type="checkbox" /> You have marked a task as Paid</label>
-<label><input checked="checked" name="notifications[]" value="task_paid_buyer" type="checkbox" /> Service provider has marked a task as Paid</label>
-<label><input checked="checked" name="notifications[]" value="task_unpaid_provider" type="checkbox" /> You have marked a task as Unpaid</label>
-<label><input checked="checked" name="notifications[]" value="task_unpaid_buyer" type="checkbox" /> Service provider has marked a task as Unpaid</label>
-<label><input checked="checked" name="notifications[]" value="task_complete_provider" type="checkbox" /> You have marked a task as Completed</label>
-<label><input checked="checked" name="notifications[]" value="task_complete_buyer" type="checkbox" /> Service provider has marked a task as Completed</label>
-<label><input checked="checked" name="notifications[]" value="task_uncomplete_provider" type="checkbox" /> You have marked a task as Uncompleted</label>
-<label><input checked="checked" name="notifications[]" value="task_uncomplete_buyer" type="checkbox" /> Service provider has marked a task as Uncompleted</label>
-<label><input checked="checked" name="notifications[]" value="task_confirm_provider" type="checkbox" /> User has marked a task as Confirmed</label>
-<label><input checked="checked" name="notifications[]" value="task_confirm_buyer" type="checkbox" /> You have marked a task as Confirmed</label>
-<label><input checked="checked" name="notifications[]" value="task_unconfirm_provider" type="checkbox" /> User has marked a task as Unconfirmed</label>
-<label><input checked="checked" name="notifications[]" value="task_unconfirm_buyer" type="checkbox" /> You have marked a task as Unconfirmed</label>
- <span class="description">You can enable or disable email notifications for the following actions.</span></div><input type="hidden" id="user_section_notifications" name="user_section_notifications" value="7edd3ac18e" /><input type="hidden" name="_wp_http_referer" value="/taskerr/edit-profile/" />
-			
-				<h3>Change Password</h3>
-
-				
-					<div class="user-pass1-wrap manage-password">
-						<div class="form-field">
-							<label for="pass1">New Password</label>
-							<button type="button" class="button secondary wp-generate-pw hide-if-no-js">Generate Password</button>
-
-							<div class="wp-pwd hide-if-js">
-																<input type="password" id="pass1" name="pass1" class="regular-text" autocomplete="off" data-pw="xN^LK@2^q&amp;^hKFTlZ&amp;xSSEm9" aria-describedby="pass-strength-result" />
-								<input type="text" style="display:none" name="pass2" id="pass2" autocomplete="off" />
+			<br>
+			<div id="post-5" class="post-5 page type-page status-publish hentry">
+				<div id="overview" class="single-content white-con">
+					<div class="post-info">
+						<header>
+							<div class="singular-headline">
+								<div class="row">
+									<div class="large-12 columns">
+										<h1>Change Password</h1>
+									</div>
+								</div>
 							</div>
-						</div>
-
-						<div class="form-field wp-pwd hide-if-js">
-							<button type="button" class="button secondary wp-hide-pw hide-if-no-js" data-start-masked="0" data-toggle="0" aria-label="Hide password">
-								<span class="dashicons dashicons-hidden"></span>
-								<span class="text">Hide</span>
-							</button>
-							<button type="button" class="button secondary wp-cancel-pw hide-if-no-js" data-toggle="0" aria-label="Cancel password change">
-								<span class="text">Cancel</span>
-							</button>
-						</div>
-
-						<div class="pass-strenght-indicator wp-pwd hide-if-no-js">
-							<label for="pass1">
-								<div id="pass-strength-result">Strength indicator</div>
-							</label>
-							<p class="description indicator-hint">Hint: The password should be at least seven characters long. To make it stronger, use upper and lower case letters, numbers and symbols like ! " ? $ % ^ &amp; ).</p>
-						</div>
+						</header><br>
+						<form id="login-form" method="post" action="{{url_for('users.userprofile', form_type='password')}}">
+							{{ password_form.hidden_tag() }}
+							{% from 'includes/_formhelpers.html' import render_field  %}
+							<fieldset>
+								<div class="form-field">
+										{{ render_field(password_form.oldpassword, class_="text regular-text required", tabindex = "2")}}
+								</div>
+								<div class="form-field">
+										{{ render_field(password_form.newpassword, class_="text regular-text required", tabindex = "2")}}
+								</div>
+								<div class="form-field">
+										{{ render_field(password_form.confirm, class_="text regular-text required", tabindex = "2")}}
+								</div>
+								<div class="form-field">
+									<input type="submit" value="Change Password">
+								</div>
+							</fieldset>
+						</form>
 					</div>
-
-				
-			
-			<div class="form-field">
-				<input type="submit" value="Update Profile">
-			</div>
-
-		</fieldset>
-
-		<input type="hidden" name="action" value="app-edit-profile" />
-		<input type="hidden" name="user_id" id="user_id" value="1" />
-	</form>
-							 
-							<span class="edit-link"><a class="post-edit-link" href="https://demos.appthemes.com/taskerr/wp-admin/post.php?post=5&#038;action=edit">Edit</a></span>													</div>
-					</div>
-
-					<!-- ad space -->
-					
 				</div>
-
-				
-			
-			
-		</main><!-- /#main -->
-
-		<div id="sidebar" class="large-3 medium-4 columns" role="complementary">
-			<div class="row"><aside id="appthemes_recent_posts-3" class="widget large-12 columns widget-recent-posts"><h1 class="widgettitle">Recent Services</h1>
-<ul>				<li class="recent-box post-96 service type-service status-publish has-post-thumbnail hentry service_cat-css-html service_cat-databases service_cat-javascript service_cat-joomla-drupal service_cat-php service_cat-programming-tech service_cat-wordpress-programming-tech service_tag-ajax service_tag-css service_tag-html service_tag-javascript-2 service_tag-jquery service_tag-mysql service_tag-php service_tag-web-development">
-
-					<div class="recent-box-thumb left">
-
-						
-							<a href="../i-can-write-or-fix-php-script-php-code-website-web-site-mysql-css-html-jquery.html" title="I can write or fix PHP script , php code, website, web site, mysql, css, html, jquery" >
-
-								
-									<img width="60" height="60" src="../files/2014/08/brain-60x60.jpg" class="attachment-recent-posts-widget size-recent-posts-widget wp-post-image" alt="" loading="lazy" srcset="https://demos.appthemes.com/taskerr/files/2014/08/brain-60x60.jpg 60w, https://demos.appthemes.com/taskerr/files/2014/08/brain-150x150.jpg 150w, https://demos.appthemes.com/taskerr/files/2014/08/brain-180x180.jpg 180w" sizes="(max-width: 60px) 100vw, 60px" />
-								
-							</a>
-
-						
-													<div class="recent-stars">
-									<span class="stars stars-0">
-		<i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i>	</span>
-								</div>
-						
-						</div><!-- end recent-box-thumb -->
-
-
-
-					<div class="recent-box-content">
-
-						<h2 class="recent-box-title">
-							<a href="../i-can-write-or-fix-php-script-php-code-website-web-site-mysql-css-html-jquery.html" rel="bookmark" title="I can write or fix PHP script , php code, website, web site, mysql, css, html, jquery">
-								I can write or fix PHP script , php code, website, web site, mysql, css, html, jquery							</a>
-						</h2>
-
-						
-						
-						<span class="recent-post-date clearfix">
-							by&nbsp;<a href="../author/afrolov/afrolov.html">Artem <span class="author-posts-qty"><em class="separator">(</em>3<em class="separator">)</em></span></a>&nbsp;on&nbsp;August 25, 2014						</span>
-					</div>
-				</li><!-- end recent-box -->				<li class="recent-box post-94 service type-service status-publish has-post-thumbnail hentry service_cat-graphics-design service_cat-logo-design service_cat-web-design-ui service_tag-design service_tag-flat service_tag-icons">
-
-					<div class="recent-box-thumb left">
-
-						
-							<a href="../i-can-design-flat-icon-for-you-app.html" title="I can design FLAT icon for you app" >
-
-								
-									<img width="60" height="60" src="../files/2014/08/Generic-Icons-e1408988741571-60x60.jpg" class="attachment-recent-posts-widget size-recent-posts-widget wp-post-image" alt="" loading="lazy" srcset="https://demos.appthemes.com/taskerr/files/2014/08/Generic-Icons-e1408988741571-60x60.jpg 60w, https://demos.appthemes.com/taskerr/files/2014/08/Generic-Icons-e1408988741571-150x150.jpg 150w, https://demos.appthemes.com/taskerr/files/2014/08/Generic-Icons-e1408988741571-180x180.jpg 180w" sizes="(max-width: 60px) 100vw, 60px" />
-								
-							</a>
-
-						
-													<div class="recent-stars">
-									<span class="stars stars-0">
-		<i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i>	</span>
-								</div>
-						
-						</div><!-- end recent-box-thumb -->
-
-
-
-					<div class="recent-box-content">
-
-						<h2 class="recent-box-title">
-							<a href="../i-can-design-flat-icon-for-you-app.html" rel="bookmark" title="I can design FLAT icon for you app">
-								I can design FLAT icon for you app							</a>
-						</h2>
-
-						
-						
-						<span class="recent-post-date clearfix">
-							by&nbsp;<a href="../author/afrolov/afrolov.html">Artem <span class="author-posts-qty"><em class="separator">(</em>3<em class="separator">)</em></span></a>&nbsp;on&nbsp;August 25, 2014						</span>
-					</div>
-				</li><!-- end recent-box -->				<li class="recent-box post-92 service type-service status-publish has-post-thumbnail hentry service_cat-copywriting service_cat-writing-translation service_tag-copywriting">
-
-					<div class="recent-box-thumb left">
-
-						
-							<a href="../i-can-copywrite-you-a-powerful-headline-and-tagline-or-slogan-for-your-business.html" title="I can copywrite you a POWERFUL headline and tagline or slogan for your business" >
-
-								
-									<img width="60" height="60" src="../files/2014/08/Copywriter-60x60.jpg" class="attachment-recent-posts-widget size-recent-posts-widget wp-post-image" alt="" loading="lazy" srcset="https://demos.appthemes.com/taskerr/files/2014/08/Copywriter-60x60.jpg 60w, https://demos.appthemes.com/taskerr/files/2014/08/Copywriter-150x150.jpg 150w, https://demos.appthemes.com/taskerr/files/2014/08/Copywriter-180x180.jpg 180w" sizes="(max-width: 60px) 100vw, 60px" />
-								
-							</a>
-
-						
-													<div class="recent-stars">
-									<span class="stars stars-0">
-		<i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i>	</span>
-								</div>
-						
-						</div><!-- end recent-box-thumb -->
-
-
-
-					<div class="recent-box-content">
-
-						<h2 class="recent-box-title">
-							<a href="../i-can-copywrite-you-a-powerful-headline-and-tagline-or-slogan-for-your-business.html" rel="bookmark" title="I can copywrite you a POWERFUL headline and tagline or slogan for your business">
-								I can copywrite you a POWERFUL headline and tagline or slogan for your business							</a>
-						</h2>
-
-						
-						
-						<span class="recent-post-date clearfix">
-							by&nbsp;<a href="../author/appthemedemo/appthemedemo.html">AppThemes </a>&nbsp;on&nbsp;August 25, 2014						</span>
-					</div>
-				</li><!-- end recent-box --></ul></aside></div><div class="row"><aside id="tr_taxonomy_list-5" class="widget large-12 columns widget-taxonomy-list"><h1 class="widgettitle">Categories</h1>
-<a href="edit-profile.html#" class="cat-down button"><i class="genericon genericon-expand"></i><span>Expand/Collapse</span></a><div class="catcol"><ul class="maincat-list small-block-grid-1 medium-block-grid-1 large-block-grid-1"><li class="maincat cat-item-24"><a href="../services/category/business/business.html" title="">Business</a> <span class="cat-item-count">(2)</span> </li>
-<li class="maincat cat-item-17"><a href="../services/category/graphics-design/graphics-design.html" title="">Graphics &amp; Design</a> <span class="cat-item-count">(2)</span> </li>
-<li class="maincat cat-item-18"><a href="../services/category/online-marketing/online-marketing.html" title="">Online Marketing</a> <span class="cat-item-count">(1)</span> </li>
-<li class="maincat cat-item-22"><a href="../services/category/programming-tech/programming-tech.html" title="">Programming &amp; Tech</a> <span class="cat-item-count">(3)</span> </li>
-<li class="maincat cat-item-19"><a href="../services/category/writing-translation/writing-translation.html" title="">Writing &amp; Translation</a> <span class="cat-item-count">(2)</span> </li>
-</ul>
-</div><!-- /catcol -->
-</aside></div><div class="row"><aside id="appthemes_facebook-3" class="widget large-12 columns widget-facebook"><h1 class="widgettitle">Facebook Friends</h1>
-
-		<div id="fb-root"></div>
-		<script>(function(d, s, id) {
-		  var js, fjs = d.getElementsByTagName(s)[0];
-		  if (d.getElementById(id)) return;
-		  js = d.createElement(s); js.id = id;
-		  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=235643263204884";
-		  fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));</script>
-
-			<div class="fb-page" data-href="https://www.facebook.com/appthemes"  data-width = "310"   data-height = "290"   data-hide-cover = "false"   data-show-facepile = "true"   data-show-posts = "false"   data-hide-cta = "false"   data-small-header = "false"   data-adapt-container-width = "true"   >
-			<div class="fb-xfbml-parse-ignore">
-				<blockquote cite="https://www.facebook.com/appthemes">
-					<a href="https://www.facebook.com/appthemes">Facebook Friends</a>
-				</blockquote>
 			</div>
-		</div>
-	</aside></div><div class="row"><aside id="tr_125_ads-4" class="widget large-12 columns widget-125-ads"><h1 class="widgettitle">Sponsored Ads</h1>
-<ul class="ads"><li class="white-con"><a href="https://www.appthemes.com/?aid=13354" rel="nofollow" target="_self"><img src="../../ads/125x125a.gif" width="125" height="125" alt="AppThemes - Premium WordPress Themes" /></a></li> <li class="white-con"><a href="https://demos.appthemes.com/taskerr/edit-profile/%22https:/www.appthemes.com/themes/ideas?aid=13354" rel="nofollow" target="_self"><img src="../../wp-content/uploads/2012/11/appthemes-ideas-feedback-125x125.png" width="125" height="125" alt="AppThemes Ideas - A customer feedback theme for WordPress" /></a></li> <li class="white-con"><a href="https://www.appthemes.com/themes/classipress/?aid=13354" rel="nofollow" target="_self"><img src="../../ads/cp-125x125a.gif" width="125" height="125" alt="ClassiPress - Premium Classified Ads Theme" /></a></li> <li class="white-con"><a href="https://www.appthemes.com/themes/vantage/?aid=13354" rel="nofollow" target="_self"><img src="../../wp-content/uploads/2012/05/appthemes-vantage-money-125x125.png" width="125" height="125" alt="AppThemes Vantage - a business directory theme for WordPress" /></a></li> </ul></aside></div>		</div><!-- end #sidebar -->
+		</main>			
+	</div>
 
-	</div><!-- end row -->
-</section>
-	</div><!-- /CONTENT -->
-
-	
-	<!-- FOOTER -->
-	<footer id="footer" role="contentinfo">
-				<!-- Footer Widgets -->
-				<div class="row widgets-footer">
-			<div class="large-12 columns">
-				<ul class="small-block-grid-2 medium-block-grid-4 large-block-grid-4">
-					<li id="text-11" class="widget widget_text"><aside><h2 class="widgettitle">About Taskerr</h2>
-			<div class="textwidget"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</div>
-		</aside></li><li id="pages-2" class="widget widget_pages"><aside><h2 class="widgettitle">Navigation</h2>
-
-			<ul>
-				<li class="page_item page-item-4"><a href="../blog/blog.html">Blog</a></li>
-<li class="page_item page-item-7"><a href="../dashboard.html">Dashboard</a></li>
-<li class="page_item page-item-5 current_page_item"><a href="edit-profile.html" aria-current="page">Edit Profile</a></li>
-<li class="page_item page-item-18"><a href="../how-things-work.html">How Things Work</a></li>
-			</ul>
-
-			</aside></li>
-		<li id="recent-posts-5" class="widget widget_recent_entries"><aside>
-		<h2 class="widgettitle">Recent Posts</h2>
-
-		<ul>
-											<li>
-					<a href="../image-alignment.html">Image Alignment</a>
-											<span class="post-date">August 22, 2014</span>
-									</li>
-											<li>
-					<a href="../html-tags-and-formatting.html">Formatting</a>
-											<span class="post-date">August 22, 2014</span>
-									</li>
-											<li>
-					<a href="../lorem-ipsum.html">Lorem Ipsum</a>
-											<span class="post-date">August 22, 2014</span>
-									</li>
-											<li>
-					<a href="../hello-world.html">Hello world!</a>
-											<span class="post-date">June 7, 2014</span>
-									</li>
-					</ul>
-
-		</aside></li><li id="rss-2" class="widget widget_rss"><aside><h2 class="widgettitle"><a class="rsswidget" href="https://feeds.feedburner.com/AppThemes/"><img class="rss-widget-icon" style="border:0" width="14" height="14" src="../wp-includes/images/rss.png" alt="RSS" /></a> <a class="rsswidget" href="../../www_appthemes_default_2.html">RSS</a></h2>
-<ul><li><a class='rsswidget' href='http://feedproxy.google.com/~r/appthemes/~3/BQw0N2RARv4/'>Introducing ClassiPress Version 4.2.0</a></li><li><a class='rsswidget' href='http://feedproxy.google.com/~r/appthemes/~3/76Ck7sj5fxo/'>Show Casing Market Stalls for an Event Using Vantage</a></li><li><a class='rsswidget' href='http://feedproxy.google.com/~r/appthemes/~3/XLSkwFd4wNE/'>JobRoller Version 1.9.1</a></li></ul></aside></li>				</ul>
-			</div>
-		</div>
-		<!-- End footer Widgets -->
-		
-		  <!-- Footer -->
-		<div class="row">
-			<div class="large-12 columns">
-				<p class="copy"><a href="../../themes/taskerr/taskerr.html" target="_blank" rel="nofollow">Taskerr Theme</a> - Powered by <a href="https://wordpress.org/" target="_blank" rel="nofollow">WordPress</a></p>
-			</div>
-		</div>
-	</footer><!-- /FOOTER -->
-
-	
-	
-	<script type='text/javascript' src='../wp-content/themes/taskerr/foundation/js/vendor/fastclick.js' id='tr-fastclick-js'></script>
-<script type='text/javascript' src='../wp-content/themes/taskerr/foundation/js/foundation.min.js' id='tr-foundation-scripts-js'></script>
-<script type='text/javascript' id='main-js-extra'>
-/* <![CDATA[ */
-var Taskerr = {"ajaxurl":"https:\/\/demos.appthemes.com\/taskerr\/wp-admin\/admin-ajax.php","current_url":"https:\/\/demos.appthemes.com\/taskerr\/edit-profile\/"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='../wp-content/themes/taskerr/scripts/scripts.js' id='main-js'></script>
-<script type='text/javascript' src='../wp-includes/js/wp-embed.min.js' id='wp-embed-js'></script>
-
-		<script>
-		jQuery(document).foundation({topbar: {stickyClass: 'sticky-top-bar'}});
-	</script>
-
-</body>
-</html>
+	{% endblock body %}
+	</section>
+</div><!-- end row -->

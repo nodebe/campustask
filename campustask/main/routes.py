@@ -10,7 +10,7 @@ CATEGORIES = {'Advertising': ['Banner Advertising', 'Flyers & Handouts', 'Hold Y
 def index():
 	global CATEGORIES
 
-	return render_template('home.html', categories=CATEGORIES)
+	return render_template('home.html', categories=CATEGORIES, title='Home')
 
 
 @main.route('/parent_category/<string:parent_category>')

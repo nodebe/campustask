@@ -1,0 +1,119 @@
+{% extends 'layout.html' %}
+{% block body %}
+<main id="main" class="large-9 medium-8 columns" role="main">	
+<div id="post-13" class="post-13 page type-page status-publish hentry">
+	<div id="overview" class="single-content white-con">
+		<div class="post-info">										
+			<form method="post" class="login-form" id="login-form">
+				{{ form.hidden_tag() }}
+				{% from 'includes/_formhelpers.html' import render_field  %}
+				<fieldset>
+					<div class="form-field">
+						<label>
+							{{ render_field(form.username, class_="text regular-text required", tabindex = "2") }}
+						</label>
+					</div>
+					<div class="form-field">
+						<label>
+							{{ render_field(form.email, class_="text regular-text required", tabindex = "3")}}
+						</label>
+					</div>
+					<div class="form-field">
+						<label>
+							{{ render_field(form.password, class_="text regular-text required", tabindex = "3")}}
+						</label>
+					</div>
+					<div class="form-field">
+						<label>
+							{{ render_field(form.confirm, class_="text regular-text required", tabindex = "3")}}
+						</label>
+					</div>
+					<div class="form-field">
+						{{ render_field(form.agree, class_="text regular-text required", tabindex = "3")}}
+						<label>Agree to <a href="#">Terms and Conditions</a></label>
+				</div><br>
+					<div class="form-field">
+							<input tabindex="5" type="submit" value="Register" />
+					</div><br>
+					<div class="form-field">
+						Have an account?<a href="{{url_for('users.login')}}"> Login</a>
+					</div>
+				</fieldset>
+
+				<!-- autofocus the field -->
+				<script type="text/javascript">try{document.getElementById('login_username').focus();}catch(e){}</script>
+			</form>
+		</div>
+	</div>		
+</div>
+</main><!-- /#main -->
+{% endblock body %}
+{% block side %}
+<div id="sidebar" class="large-3 medium-4 columns" role="complementary">
+
+<div class="row">
+	<aside id="appthemes_recent_posts-3" class="widget large-12 columns widget-recent-posts">
+		<h1 class="widgettitle">Recent Services</h1>
+
+		<ul>				
+			<li class="recent-box post-96 service type-service status-publish has-post-thumbnail hentry service_cat-css-html service_cat-databases service_cat-javascript service_cat-joomla-drupal service_cat-php service_cat-programming-tech service_cat-wordpress-programming-tech service_tag-ajax service_tag-css service_tag-html service_tag-javascript-2 service_tag-jquery service_tag-mysql service_tag-php service_tag-web-development">
+
+				<div class="recent-box-thumb left">
+					<a href="#" title="I can write or fix PHP script , php code, website, web site, mysql, css, html, jquery" >
+						<img width="60" height="60" src="taskerr/files/2014/08/brain-60x60.jpg" class="attachment-recent-posts-widget size-recent-posts-widget wp-post-image" alt="" loading="lazy" srcset="https://demos.appthemes.com/taskerr/files/2014/08/brain-60x60.jpg 60w, https://demos.appthemes.com/taskerr/files/2014/08/brain-150x150.jpg 150w, https://demos.appthemes.com/taskerr/files/2014/08/brain-180x180.jpg 180w" sizes="(max-width: 60px) 100vw, 60px" />	
+					</a>
+					<div class="recent-stars">
+						<span class="stars stars-0">
+							<i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i>	
+						</span>
+					</div>
+				</div><!-- end recent-box-thumb -->
+				<div class="recent-box-content">
+					<h2 class="recent-box-title">
+						<a href="#" rel="bookmark" title="I can write or fix PHP script , php code, website, web site, mysql, css, html, jquery">I can write or fix PHP script , php code, website, web site, mysql, css, html, jquery</a>
+					</h2>
+					<span class="recent-post-date clearfix">
+						by&nbsp;<a href="taskerr/author/afrolov/afrolov.html">Artem <span class="author-posts-qty"><em class="separator">(</em>3<em class="separator">)</em></span></a>&nbsp;on&nbsp;August 25, 2014						
+					</span>
+				</div>
+			</li><!-- end recent-box -->
+		</ul>
+	</aside>
+</div>
+<div class="row">
+	<aside id="tr_taxonomy_list-5" class="widget large-12 columns widget-taxonomy-list">
+		<h1 class="widgettitle">Categories</h1>
+			<a href="#" class="cat-down button"><i class="genericon genericon-expand"></i><span>Expand/Collapse</span></a>
+			<div class="catcol">
+				<ul class="maincat-list small-block-grid-1 medium-block-grid-1 large-block-grid-1">
+				{% for heading in categories.keys() %}
+					<li class="maincat cat-item-24">
+						<a href="{{url_for('main.parent_category', parent_category = heading)}}" title="{{ heading }}" title="">{{ heading }}</a>
+					</li>
+				{% endfor %}
+				</ul>
+			</div>
+			<!-- /catcol -->
+	</aside>
+</div>
+<div class="row">
+	<aside id="tr_125_ads-4" class="widget large-12 columns widget-125-ads">
+		<h1 class="widgettitle">Sponsored Ads</h1>
+		<ul class="ads">
+			<li class="white-con"><a href="#" rel="nofollow" target="_self">
+				<img src="../static/img/itechfor.png" width="125" height="125" alt="ITechFor" /></a>
+			</li> 
+			<li class="white-con">
+				<a href="#" rel="nofollow" target="_self"><img src="../static/img/itechfor.png" width="125" height="125" alt="ITechFor" /></a>
+			</li> 
+			<li class="white-con">
+				<a href="#" rel="nofollow" target="_self"><img src="../static/img/itechfor.png" width="125" height="125" alt="ITechFor" /></a>
+			</li> 
+			<li class="white-con">
+				<a href="#" rel="nofollow" target="_self"><img src="../static/img/itechfor.png" width="125" height="125" alt="ITechFor" /></a>
+			</li> 
+		</ul>
+	</aside>
+</div>
+</div><!-- end #sidebar -->
+{% endblock side %}

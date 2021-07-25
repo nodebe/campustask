@@ -6,7 +6,7 @@ from campustask.config import app
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 login_manager =  LoginManager(app)
-login_manager.login_view = 'users.signin'
+login_manager.login_view = 'users.login'
 login_manager.login_message_category = 'info'
 
 from campustask.models import *
