@@ -14,9 +14,11 @@ from campustask.models import *
 
 from campustask.users.routes import users
 from campustask.main.routes import main
+from campustask.task.routes import task
 
 app.register_blueprint(users)
 app.register_blueprint(main)
+app.register_blueprint(task)
 
 
 @login_manager.user_loader

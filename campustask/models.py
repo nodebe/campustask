@@ -12,6 +12,16 @@ user_to_tasks = db.Table('user_to_tasks',
 	db.Column('rating', db.Float, default = 0.0)
 	)
 
+task_to_category = db.Table('task_to_category',
+	db.Column('task_id', db.Integer, db.ForeignKey('task.id')),
+	db.Column('category_id', db.Integer, db.ForeignKey('category.id'))
+	)
+
+task_to_subcategory = db.Table('task_to_subcategory',
+	db.Column('task_id', db.Integer, db.ForeignKey('task.id')),
+	db.Column('subcategory_id', db.Integer, db.ForeignKey('subcategory.id'))
+	)
+
 
 class User(db.Model, UserMixin):
 	id = db.Column(db.Integer, primary_key = True, unique = True)
@@ -28,6 +38,8 @@ class User(db.Model, UserMixin):
 	notifications = db.relationship('Notification', backref = 'user_notifications')
 	#one user can have many tasks
 	tasks_owned = db.relationship('Task', backref = 'user_tasks_owned')
+	#link to the user_to_task table
+	tasks_subscribed = db.relationship('Task', secondary=user_to_tasks, backref = db.backref('task_subscribed_to', lazy='dynamic'))
 
 
 class Task(db.Model):
@@ -39,37 +51,41 @@ class Task(db.Model):
 	d_u_d = db.Column(db.Integer, nullable = False)
 	price = db.Column(db.String, nullable = False)
 	description = db.Column(db.Text, nullable = False)
-	_categories = db.Column(db.String, default = "")
-	image_name = db.Column(db.String, default = 'default_image.jpg')
+	_image_name = db.Column(db.String, default = '')
 	image_hash = db.Column(db.Text)
 	#connects to the plan model, a task can have only one plan
 	plan_id = db.Column(db.Integer, db.ForeignKey('plan.id'))
 	#number of times the task has been completed by the agent
 	times_completed = db.Column(db.Integer, default = 0)
-	_rating = db.Column(db.String, default = '0.0')
+	#_rating = db.Column(db.String, default = '0.0')
+	#link to category table
+	task_category = db.relationship('Category', secondary=task_to_category, backref = db.backref('task_head_category', lazy='dynamic'))
+	#link to subcategory table
+	task_sub_category = db.relationship('Subcategory', secondary=task_to_subcategory, backref = db.backref('task_subcategory', lazy='dynamic'))
+
+
+	'''@property
+				def rating(self):
+			
+					return [float(x) for x in self._rating.split(';')]
+				
+				@rating.setter
+				def rating(self, value):
+					self._ratings += ';{}'.format(value)'''
+
 
 	@property
-	def categories(self):
-		#this returns the _categories column as a list to our backend
-		return [x for x in self._categories.split(',')]
+	def image_name(self):
 
-	@categories.setter
-	def categories(self, value):
-		#this takes in a list stored as 'value' from the backend and inserts it into the _categories column
-		for x in value:
-			if self._categories != "":
-				self._categories += ',{}'.format(x)
+		return [image for image in self._image_name.split(';')]
+
+	@image_name.setter
+	def image_name(self, images):
+		for image in images:
+			if self._image_name != None:
+				self._image_name += ';{}'.format(image)
 			else:
-				self._categories += '{}'.format(x)
-
-	@property
-	def rating(self):
-
-		return [float(x) for x in self._rating.split(',')]
-	
-	@rating.setter
-	def rating(self, value):
-		self._ratings += ';{}'.format(value)
+				self._image_name = '{}'.format(image)
 
 
 class Plan(db.Model):
@@ -103,3 +119,29 @@ class Contact(db.Model):
 	message = db.Column(db.Text, nullable = False)
 	read = db.Column(db.Integer, default = 0)
 
+
+class Category(db.Model):
+	id = db.Column(db.Integer, primary_key = True, unique = True)
+	name = db.Column(db.String())
+	#one category can have many subcategories
+	sub_categories = db.relationship('Subcategory', backref = 'category_sub')
+
+class Subcategory(db.Model):
+	id = db.Column(db.Integer, primary_key = True, unique = True)
+	name = db.Column(db.String())
+	#connects to the category model
+	category_id = db.Column(db.Integer, db.ForeignKey('category.id'))
+
+
+def get_categories():
+	'''
+	This creates and sends categories to pages that need to display them
+	'''
+	db_categories = Category.query.all()
+
+	categories = {}
+
+	for i in db_categories:
+		categories[i.name] = [x.name for x in i.sub_categories]
+
+	return categories

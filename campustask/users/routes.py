@@ -1,9 +1,9 @@
 from flask import Blueprint, render_template, request, flash, redirect, url_for
 from flask_login import login_required, login_user, current_user
 from campustask import db
-from campustask.main.routes import CATEGORIES
+# from campustask.main.routes import CATEGORIES
 from campustask.users.forms import Register, ProfileEdit, PasswordChange
-from campustask.models import User
+from campustask.models import User, get_categories
 from passlib.hash import sha256_crypt as sha256
 
 
@@ -14,7 +14,7 @@ error_message = 'Something went wrong, try again later! '
 def register():
 	if current_user.is_authenticated:
 		return redirect(url_for('users.user_dashboard'))
-	global CATEGORIES, error_message
+	global error_message
 	register_form = Register()
 
 	if register_form.validate_on_submit():
@@ -32,7 +32,7 @@ def register():
 			flash(error_message + str(e), 'warning')
 	
 
-	return render_template('register.html', title = 'Register', categories = CATEGORIES, form = register_form)
+	return render_template('register.html', title = 'Register', categories = get_categories(), form = register_form)
 
 @users.route('/login', methods = ['GET', 'POST'])
 def login():
@@ -71,7 +71,6 @@ def userprofile(form_type=''):
 		finally:
 			return redirect(url_for('users.userprofile'))
 
-	print(form.campus.data)
 	if form_type == 'profile' and form.validate_on_submit():
 		try:
 			current_user.firstname = form.firstname.data
@@ -86,7 +85,7 @@ def userprofile(form_type=''):
 			flash(error_message + str(e), 'warning')
 			return redirect(url_for('users.userprofile'))
 
-	return render_template('edit-profile.html', title = 'Profile', categories = CATEGORIES, password_form = password_form, form = form)
+	return render_template('edit-profile.html', title = 'Profile', categories = get_categories(), password_form = password_form, form = form)
 
 '''
 @users.route('/passwordchange', methods = ['POST'])
