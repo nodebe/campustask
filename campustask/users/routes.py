@@ -14,7 +14,7 @@ error_message = 'Something went wrong, try again later! '
 def register():
 	if current_user.is_authenticated:
 		return redirect(url_for('users.user_dashboard'))
-	global error_message
+
 	register_form = Register()
 
 	if register_form.validate_on_submit():
@@ -23,14 +23,14 @@ def register():
 			user = User(username = register_form.username.data, email = register_form.email.data, password = hashed_password)
 			db.session.add(user)
 			db.session.commit()
+		except Exception as e:
+			flash(error_message + str(e), 'warning')
+		else:
 			user_login = User.query.filter_by(email=register_form.email.data).first()
 			login_user(user_login)
 			flash('Account created successfully!', 'success')
 			flash('Please complete your profile!','info')
 			return redirect(url_for('users.userprofile'))
-		except Exception as e:
-			flash(error_message + str(e), 'warning')
-	
 
 	return render_template('register.html', title = 'Register', categories = get_categories(), form = register_form)
 
@@ -65,9 +65,10 @@ def userprofile(form_type=''):
 		try:
 			current_user.password = sha256.encrypt(str(password_form.newpassword.data))
 			db.session.commit()
-			flash('Password changed successfully', 'success')
 		except Exception as e:
 			flash(error_message + str(e), 'warning')
+		else:
+			flash('Password changed successfully', 'success')
 		finally:
 			return redirect(url_for('users.userprofile'))
 
@@ -79,10 +80,11 @@ def userprofile(form_type=''):
 			current_user.campus = form.campus.data
 			current_user.email = form.email.data
 			db.session.commit()
-			flash('Profile updated successfully', 'success')
-			return redirect(url_for('users.userprofile'))
 		except Exception as e:
 			flash(error_message + str(e), 'warning')
+			return redirect(url_for('users.userprofile'))
+		else:
+			flash('Profile updated successfully', 'success')
 			return redirect(url_for('users.userprofile'))
 
 	return render_template('edit-profile.html', title = 'Profile', categories = get_categories(), password_form = password_form, form = form)

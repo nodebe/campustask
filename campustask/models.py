@@ -51,7 +51,7 @@ class Task(db.Model):
 	d_u_d = db.Column(db.Integer, nullable = False)
 	price = db.Column(db.String, nullable = False)
 	description = db.Column(db.Text, nullable = False)
-	_image_name = db.Column(db.String, default = '')
+	_image_name = db.Column(db.String, default = None)
 	image_hash = db.Column(db.Text)
 	#connects to the plan model, a task can have only one plan
 	plan_id = db.Column(db.Integer, db.ForeignKey('plan.id'))
@@ -62,6 +62,7 @@ class Task(db.Model):
 	task_category = db.relationship('Category', secondary=task_to_category, backref = db.backref('task_head_category', lazy='dynamic'))
 	#link to subcategory table
 	task_sub_category = db.relationship('Subcategory', secondary=task_to_subcategory, backref = db.backref('task_subcategory', lazy='dynamic'))
+	views = db.Column(db.Integer, default = 0)
 
 
 	'''@property

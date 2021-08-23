@@ -1,0 +1,230 @@
+{% extends 'layout.html' %}
+	
+	<!-- WIDGETIZED AREA -->
+	<div id="top-widgets" role="complementary">
+				<!-- widgetized area below navbar -->
+		
+			</div><!-- /WIDGETIZED AREA -->
+
+	<!-- CONTENT -->
+	{% block head %}
+		<div class="singular-headline">
+		<div class="row">
+		<div class="large-12 columns">
+							<span>Service Details</span>
+					</div>
+	</div>
+</div>
+{% endblock head %}
+
+<div class="singular-row row">
+
+{% block body %}
+	
+	<main id="main" class="large-9 medium-8 columns" role="main">
+
+			<article id="service" class="post-92 service type-service status-publish has-post-thumbnail hentry service_cat-copywriting service_cat-writing-translation service_tag-copywriting">
+				<!-- service -->
+				<div class="single-content white-con">
+
+					<header>
+						<div class="post-head">
+							
+							<div class="stat">
+									<span class="stars stars-0">
+		<i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i>	</span>
+	0 Reviews							</div>
+						</div>
+
+												<div class="post-title">
+							<h1>{{task.title}}</h1>
+						</div>
+						
+					</header><!-- end header -->
+
+					<div class="post-bar" data-equalizer>
+						<div class="post-bar-item small-4 columns" title="Delivery timeframe" data-equalizer-watch>
+							<i class="genericon genericon-time">
+								<span class="show-for-large-up">Will deliver in:</span>
+							</i>
+							<strong>{{task.d_u_d}} <span>days</span></strong>
+						</div>
+						<div class="post-bar-item small-4 columns" title="Tasks Completed" data-equalizer-watch>
+							<i class="genericon genericon-checkmark">
+								<span class="show-for-large-up">Tasks Completed:</span>
+							</i>
+							<strong>{{task.times_completed}}</strong>
+						</div>
+						<div class="post-bar-item small-4 columns" title="Views" data-equalizer-watch>
+							<i class="genericon genericon-show">
+								<span class="show-for-large-up">Views:</span>
+							</i>
+							<strong>{{task.views}}</strong>
+						</div>
+					</div>
+
+					<div class="post-slider">
+						<ul class="attachements-slider" data-orbit data-options="bullets:false;timer:false;slide_number_text:of;">
+						<li>
+				<figure>
+					<a rel="colorbox" href="../static/img/tasks/slides/{{ task.image_name[0] }}" title=""><img width="870" height="489" src="../static/img/tasks/slides/{{ task.image_name[0] }}" class="attachment-tr-slider size-tr-slider" alt="" loading="lazy" /></a>
+				</figure>
+			</li>
+			</ul>					</div>
+
+					<div class="post-bar terms-bar"  data-equalizer>
+						<div class="post-bar-item small-12 medium-12 large-12 columns" title="Categories" data-equalizer-watch>
+								<i class="genericon genericon-category">
+									<span class="show-for-large-up">Categories:</span>
+								</i>
+								{% for category in task.task_category %}
+									<a href="{{url_for('main.parent_category', parent_category=category.name)}}">{{ category.name }}</a>
+									{% if task.task_sub_category != [] or category != task.task_category[-1] %}
+										<em class="separator"> ,</em>
+									{% endif %}
+								{% endfor %}
+								{% for subcategory in task.task_sub_category %}
+									<a href="{{url_for('main.child_category', child_category=subcategory.name)}}">{{ subcategory.name }}</a>
+									{% if subcategory != task.task_sub_category[-1] %}
+										<em class="separator"> ,</em>
+									{% endif %}
+								{% endfor %}
+						</div>
+					</div>
+
+					<div class="post-info">
+						<ul class="button-group">
+							<li><a class="fave-button listing-fave-link button" href="#" rel="nofollow"><i class="genericon genericon-heart"></i> <span>Favorite</span></a></li>
+							<li></li>
+							<li><a href="#" class="button secondary">
+			<i class="genericon genericon-edit"></i>
+			<span>Edit Service</span>
+		</a>
+	</li>
+						</ul>
+
+						<p class="desc-label">Description</p>
+							<div class="single-service-description-content">
+							<p><span style="color: #555555;">{{ task.description }}</p>
+						</div>
+											</div>
+				</div>
+				
+				<dl class="tabs" data-tab data-options="deep_linking:true">
+					<dd class="active"><a href="i-can-copywrite-you-a-powerful-headline-and-tagline-or-slogan-for-your-business.html#comments-tab">Comments (0)</a></dd>
+					<dd><a href="i-can-copywrite-you-a-powerful-headline-and-tagline-or-slogan-for-your-business.html#reviews-tab">Reviews (0)</a></dd>
+				</dl>
+				<div class="tabs-content white-con">
+					<div class="content active" id="comments-tab">
+							<section id="comments" class="feedback-section">
+	
+	
+	
+					<p class="nocomments">Comments are closed.</p>
+
+					</section><!-- #comments -->
+					</div>
+					<div class="content" id="reviews-tab">
+						<section id="reviews" class="feedback-section">
+							<header>
+								<h2 class="comments-title">
+									0 reviews on &ldquo;<span>I can copywrite you a POWERFUL headline and tagline or slogan for your business</span>&rdquo;										<span class="stars stars-0">
+								<i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i>	</span>
+									</h2>
+							</header>
+								<p>There are no reviews yet.</p>
+						</section><!-- #reviews -->
+					</div>
+				</div>
+
+								<!-- ad space -->
+				
+			</article>
+
+			
+		
+		
+		
+	</main><!-- end #main -->
+
+	<div id="sidebar" class="large-3 medium-4 columns" role="complementary">
+		
+<div class="row">
+	<div id="tr_buy_it_button" class="widget static-widget widget-buy-it large-12 columns">
+				<span class="button success">Cost of service:&nbsp;<span>₦</span>{{ task.price }}</span>
+		</div>
+</div>
+
+<div class="row">
+	<aside id="tr_author_info" class="widget static-widget widget-author-info large-12 columns">
+		<header>
+			<h1>
+				Offered by {{ task.user_tasks_owned.username }}			</h1>
+		</header>
+		<div class="clearfix">
+			<ul>
+				<li>
+					<span class="left">Current Tasks:</span>
+					<strong class="right">{{ task.user_tasks_owned.no_of_tasks_at_hand }}</strong>
+				</li>
+				<li>
+					<span class="left">Tasks Completed:</span>
+					<strong class="right">{{ task.times_completed }}</strong>
+				</li>
+				<li>
+					<span class="left">Rating:</span>
+					<strong class="right">90%</strong>
+				</li>
+			</ul>
+			<p class='text-center author-link'>
+				<a href="author/appthemedemo/appthemedemo.html">See all {{task.user_tasks_owned.username}}'s services</a>
+			</p>
+		</div>
+	</aside>
+</div>
+
+<div class="row">
+	<aside id="tr_author_recent_posts" class="widget static-widget large-12 columns widget-author-recent-posts">
+		<header><h1 class="widgettitle">More Services from {{ task.user_tasks_owned.username }}</h1>
+</header>
+<ul>
+	{% for tasks in task.user_tasks_owned.tasks_owned[::-1][0:4] %}
+		{% if tasks.id == task.id %}
+		 {{ continue }}
+		{% else %}
+			<li class="recent-box post-92 service type-service status-publish has-post-thumbnail hentry service_cat-copywriting service_cat-writing-translation service_tag-copywriting">
+
+					<div class="recent-box-thumb left">
+
+						
+							<a href="{{ url_for('task.view_service', service_id=tasks.id) }}" title="{{ tasks.title }}" >
+
+								
+									<img width="60" height="60" src="files/2014/08/Copywriter-60x60.jpg" class="attachment-recent-posts-widget size-recent-posts-widget wp-post-image" alt="" loading="lazy" srcset="../static/img/tasks/normal/{{ tasks.image_name[0] }}" sizes="(max-width: 60px) 100vw, 60px" />
+								
+							</a>
+						</div><!-- end recent-box-thumb -->
+
+					<div class="recent-box-content">
+
+						<h2 class="recent-box-title">
+							<a href="{{ url_for('task.view_service', service_id=tasks.id) }}" title="{{ tasks.title }}" rel="bookmark" title="{{ tasks.title }}">
+								{{ tasks.title }}
+							</a>
+						</h2>
+						
+						<span class="recent-post-date clearfix">
+							by&nbsp;<a href="author/appthemedemo/appthemedemo.html">AppThemes </a>						</span>
+					</div>
+				</li><!-- end recent-box -->
+
+			{% endif %}
+				{% endfor %}
+								</ul>	</aside>
+</div>
+
+	</div><!-- end #sidebar -->
+
+</div><!-- end row -->
+
+{% endblock body %}
