@@ -66,8 +66,9 @@
 					<div class="post-slider">
 						<ul class="attachements-slider" data-orbit data-options="bullets:false;timer:false;slide_number_text:of;">
 						<li>
+
 				<figure>
-					<a rel="colorbox" href="../static/img/tasks/slides/{{ task.image_name[0] }}" title=""><img width="870" height="489" src="../static/img/tasks/slides/{{ task.image_name[0] }}" class="attachment-tr-slider size-tr-slider" alt="" loading="lazy" /></a>
+					<a rel="colorbox" href="../static/img/tasks/slides/{{ task.image_name[0] }}" title=""><img width="870" height="489" src="../static/img/tasks/slides/{{ task.image_name[0]}}" class="attachment-tr-slider size-tr-slider" alt="" loading="lazy" /></a>
 				</figure>
 			</li>
 			</ul>					</div>
@@ -128,7 +129,7 @@
 						<section id="reviews" class="feedback-section">
 							<header>
 								<h2 class="comments-title">
-									0 reviews on &ldquo;<span>I can copywrite you a POWERFUL headline and tagline or slogan for your business</span>&rdquo;										<span class="stars stars-0">
+									0 reviews on &ldquo;<span>{{task.title}}</span>&rdquo;										<span class="stars stars-0">
 								<i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i>	</span>
 									</h2>
 							</header>
@@ -177,7 +178,7 @@
 				</li>
 			</ul>
 			<p class='text-center author-link'>
-				<a href="author/appthemedemo/appthemedemo.html">See all {{task.user_tasks_owned.username}}'s services</a>
+				<a href="{{ url_for('task.view_all_service', user_id = task.user_tasks_owned.id) }}">See all {{task.user_tasks_owned.username}}'s services</a>
 			</p>
 		</div>
 	</aside>
@@ -200,7 +201,7 @@
 							<a href="{{ url_for('task.view_service', service_id=tasks.id) }}" title="{{ tasks.title }}" >
 
 								
-									<img width="60" height="60" src="files/2014/08/Copywriter-60x60.jpg" class="attachment-recent-posts-widget size-recent-posts-widget wp-post-image" alt="" loading="lazy" srcset="../static/img/tasks/normal/{{ tasks.image_name[0] }}" sizes="(max-width: 60px) 100vw, 60px" />
+									<img width="60" height="60" src="../static/img/tasks/normal/{{ tasks.image_name[0] }}" class="attachment-recent-posts-widget size-recent-posts-widget wp-post-image" alt="" loading="lazy" />
 								
 							</a>
 						</div><!-- end recent-box-thumb -->

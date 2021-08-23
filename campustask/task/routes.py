@@ -52,6 +52,12 @@ def view_service(service_id):
 
 	return render_template('view_service.html', title = task.title, task = task)
 
+@task.route('/view_all_service/<user_id>')
+def view_all_service(user_id):
+	user = User.query.filter_by(id = user_id).first()
+	recent_tasks = Task.query.all()[::-1][:3]
+
+	return render_template('view_all_service.html', title=f'All tasks by {user.username}', recent_tasks = recent_tasks, user = user, categories = get_categories())
 
 
 @task.route('/service_payment_description')

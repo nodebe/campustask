@@ -1,0 +1,308 @@
+{% extends 'layout.html' %}
+{% block body %}
+	<main id="main" class="large-9 medium-8 columns" role="main">
+
+		<section id="author_page">
+
+			<header class="large-12 columns user-content white-con">
+
+				<div class="row">
+					<!-- Insert author picture -->
+				<!-- 	<div class="large-3 columns user-avatar">
+						<img alt='' src='https://secure.gravatar.com/avatar/1272959116d5e4ed40d51708d236825f?s=150&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/1272959116d5e4ed40d51708d236825f?s=300&#038;d=mm&#038;r=g 2x' class='avatar avatar-150 photo' height='150' width='150' loading='lazy'/>					</div> -->
+					<div class="large-9 columns user-info">
+						<div class="user-name">
+							<h1>{{user.username}}</h1>
+						</div>
+
+						<div class="user-description">
+							<p>{{user.bio}}</p>
+						</div>
+
+						<div class="user-social-links">
+							<ul class="inline-list">
+															<li>
+									<a href="https://facebook.com/{{user.facebook}}" title="Facebook" target="_blank">
+										<i class="genericon genericon-facebook"></i>
+										<span>{{user.facebook}}</span>
+									</a>
+								</li>
+								<!-- <li>
+									<a href="https://twitter.com/appthemes" title="Twitter">
+										<i class="genericon genericon-twitter"></i>
+										<span>@appthemes</span>
+									</a>
+								</li> -->
+									<li>
+									<a href="{{user.website}}" title="Website" target="_blank">
+										<i class="genericon genericon-planet"></i>
+										<span>{{user.website[8:]}}</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="user-header-meta row">
+							<div class="meta-rating large-4 columns">
+								<strong>90%</strong><span class="label-meta">Rating</span>
+							</div>
+							<div class="meta-current large-4 columns">
+								<strong>2</strong><span class="label-meta">Reviews received</span>
+							</div>
+							<div class="meta-completed large-4 columns">
+								<strong>1</strong><span class="label-meta">Tasks Completed</span>
+							</div>
+						</div><!-- end row -->
+
+					</div>
+				</div><!-- end row -->
+			</header>
+
+			<div class="large-12 columns user-posts">
+				<div class="row">
+					<dl class="tabs" data-tab data-options="deep_linking:true">
+									<dd>
+			<a href="appthemedemo.html#panel-services-current">Current Services&nbsp;(5)</a>
+		</dd>
+																	<dd>
+			<a href="appthemedemo.html#panel-service-reviews">Reviews&nbsp;(2)</a>
+		</dd>
+															</dl>
+				<div class="tabs-content">
+							<section class="content services-current" id="panel-services-current">
+								
+	
+	
+		{% for task in user.tasks_owned %}
+		<article id="post-92" class="loop-content post-92 service type-service status-publish has-post-thumbnail hentry service_cat-copywriting service_cat-writing-translation service_tag-copywriting">
+	<div class="row collapse">
+
+		<div class="post-main large-10 medium-10 columns white-con">
+			<div class="features row">
+
+				<div class="person large-3 medium-3 columns">
+						<a class="service-thumbnail" href="{{ url_for('task.view_service', service_id=task.id) }}" title="{{task.title}}">
+							<img width="180" height="180" src="../static/img/tasks/normal/{{task.image_name[0]}}" class="attachment-service-thumbnail size-service-thumbnail wp-post-image" alt="" loading="lazy" />	
+						</a>
+					<div class="review-meta column centered">
+							<span class="stars stars-0">
+					<i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i>	</span>
+						</div>
+				</div>
+
+				<div class="info large-9 medium-9 columns">
+					<header>
+						<h1><a href="{{ url_for('task.view_service', service_id=task.id) }}" rel="bookmark">
+							<span class="featured">
+								{{ task.title }}</span>
+						</a></h1>
+					</header>
+					
+						<div class="service-description">
+							<p>{{ task.description | truncate(300)}}</p>
+						</div>
+				</div>
+
+			</div>
+
+			<!-- service meta author-->
+			<div class="ft-bar row">
+				<div class="post-meta service-author large-3 medium-3 small-6 columns">
+					<i class="genericon genericon-user"></i>
+					by					<a href="appthemedemo.html">{{ user.username }}</a>				</div>
+				<div class="post-meta service-author-rating large-3 medium-3 small-6 columns">
+					<i class="genericon genericon-star"></i>
+					Rating:										<span>90%</span>
+				</div>
+				<div class="post-meta service-category large-6 medium-6 small-6 columns left">
+					<i class="genericon genericon-category"></i>
+					Category:	{% for category in task.task_category %}
+									<a href="{{url_for('main.parent_category', parent_category=category.name)}}">{{ category.name }}</a>
+									{% if task.task_sub_category != [] or category != task.task_category[-1] %}
+										<em class="separator"> ,</em>
+									{% endif %}
+								{% endfor %}
+								{% for subcategory in task.task_sub_category %}
+									<a href="{{url_for('main.child_category', child_category=subcategory.name)}}">{{ subcategory.name }}</a>
+									{% if subcategory != task.task_sub_category[-1] %}
+										<em class="separator"> ,</em>
+									{% endif %}
+								{% endfor %}
+				</div>
+				
+			</div><!-- end row -->
+
+			
+		</div><!-- end 10-columns -->
+
+		<div class="btn-bar large-2 medium-2 columns">
+
+			<div class="price grey"><span>₦</span>{{ task.price }}</div>
+						<a class="fave-button listing-fave-link button" href="#" rel="nofollow"><i class="genericon genericon-heart"></i> <span>Favorite</span></a>
+		</div>
+
+	</div><!-- end row -->
+</article>
+{% endfor %}
+
+										<!-- pagination -->
+		<div class="row">
+			<div class="pagination-centered">
+			</div>
+		</div>
+		<!-- /pagination -->							</section>
+																				<section class="content service-reviews" id="panel-service-reviews">
+									<ol class="commentlist">
+					<li id="review-6" class="review byuser comment-author-afrolov even thread-even depth-1">
+				<article id="div-comment-6" class="comment-body">
+					<header class="comment-meta">
+						<div class="comment-author">
+							<img alt='' src='https://secure.gravatar.com/avatar/f407545e6fee59b188727fc5a9b42161?s=85&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/f407545e6fee59b188727fc5a9b42161?s=170&#038;d=mm&#038;r=g 2x' class='avatar avatar-85 photo' height='85' width='85' loading='lazy'/>							<h3 class="comment-title">
+								<span class="fn">
+										<span class="stars stars-5">
+		<i class="genericon genericon-star good-star"></i><i class="genericon genericon-star good-star"></i><i class="genericon genericon-star good-star"></i><i class="genericon genericon-star good-star"></i><i class="genericon genericon-star good-star"></i>	</span>
+										<a href="../afrolov/afrolov.html">
+										Artem									</a>
+								</span>
+								on								<a class="review-meta" href="../../i-can-lorem-ipsum.html#review-6">
+									<time datetime="">
+										August 22, 2014									</time>
+								</a>
+
+																	about									<a class="review-meta" href="../../i-can-lorem-ipsum.html">
+										I can Lorem Ipsum									</a>
+															</h3>
+						</div><!-- .comment-author -->
+					</header><!-- .comment-meta -->
+
+					<div class="comment-content">
+						<p>appthemesdemo is the Lorem master and Ipsum ninja!!!<br />
+Perfect!</p>
+					</div><!-- .comment-content -->
+
+				</article><!-- .comment-body -->
+			</li>
+					<li id="review-5" class="review byuser comment-author-afrolov odd alt thread-odd thread-alt depth-1">
+				<article id="div-comment-5" class="comment-body">
+					<header class="comment-meta">
+						<div class="comment-author">
+							<img alt='' src='https://secure.gravatar.com/avatar/f407545e6fee59b188727fc5a9b42161?s=85&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/f407545e6fee59b188727fc5a9b42161?s=170&#038;d=mm&#038;r=g 2x' class='avatar avatar-85 photo' height='85' width='85' loading='lazy'/>							<h3 class="comment-title">
+								<span class="fn">
+										<span class="stars stars-4">
+		<i class="genericon genericon-star good-star"></i><i class="genericon genericon-star good-star"></i><i class="genericon genericon-star good-star"></i><i class="genericon genericon-star good-star"></i><i class="genericon genericon-star bad-star"></i>	</span>
+										<a href="../afrolov/afrolov.html">
+										Artem									</a>
+								</span>
+								on								<a class="review-meta" href="../../i-can-install-wordpress-site-for-you.html#review-5">
+									<time datetime="">
+										August 22, 2014									</time>
+								</a>
+
+																	about									<a class="review-meta" href="../../i-can-install-wordpress-site-for-you.html">
+										I can install WordPress site for you									</a>
+															</h3>
+						</div><!-- .comment-author -->
+					</header><!-- .comment-meta -->
+
+					<div class="comment-content">
+						<p>Very good! But i&#8217;m not happy 🙁</p>
+					</div><!-- .comment-content -->
+
+				</article><!-- .comment-body -->
+			</li>
+			</ol>
+										<!-- pagination -->
+		<div class="row">
+			<div class="pagination-centered">
+							</div>
+		</div>
+		<!-- /pagination -->							</section>
+																		</div>
+				</div>
+			</div><!-- end .user-posts -->
+
+		</section>
+
+	</main><!-- end main -->
+	<div id="sidebar" class="large-3 medium-4 columns" role="complementary">
+
+		<div class="row">
+			<aside id="appthemes_recent_posts-3" class="widget large-12 columns widget-recent-posts">
+				<h1 class="widgettitle">Recent Services</h1>
+					<ul>
+						{% for recent in recent_tasks[::-1] %}
+						<li class="recent-box post-96 service type-service status-publish has-post-thumbnail hentry service_cat-css-html service_cat-databases service_cat-javascript service_cat-joomla-drupal service_cat-php service_cat-programming-tech service_cat-wordpress-programming-tech service_tag-ajax service_tag-css service_tag-html service_tag-javascript-2 service_tag-jquery service_tag-mysql service_tag-php service_tag-web-development">
+
+						<div class="recent-box-thumb left">
+
+						
+							<a href="{{ url_for('task.view_service', service_id=recent.id) }}" title="{{ recent.title }}" >
+
+								
+									<img width="60" height="60" src="../static/img/tasks/normal/{{recent.image_name[0]}}" class="attachment-recent-posts-widget size-recent-posts-widget wp-post-image" alt="" loading="lazy" />
+								
+							</a>
+
+						
+							<div class="recent-stars">
+								<span class="stars stars-0">
+									<i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i>	</span>
+							</div>
+						
+						</div><!-- end recent-box-thumb -->
+
+
+
+					<div class="recent-box-content">
+
+						<h2 class="recent-box-title">
+							<a href="{{ url_for('task.view_service', service_id=recent.id) }}" title="{{ recent.title }}" rel="bookmark">
+								{{recent.title}}</a>
+						</h2>
+
+						
+						
+						<span class="recent-post-date clearfix">
+							by&nbsp;<a href="{{ url_for('task.view_all_service', user_id=recent.user_tasks_owned.id) }}" title="{{ recent.user_tasks_owned.username }}">{{user.username}} <span class="author-posts-qty"><em class="separator">(</em>{{ recent.user_tasks_owned.tasks_owned | length }}<em class="separator">)</em></span></a>
+						</span>
+					</div>
+				</li><!-- end recent-box -->				
+				{% endfor %}
+			</ul>
+
+		</aside></div><div class="row"><aside id="tr_taxonomy_list-5" class="widget large-12 columns widget-taxonomy-list">
+		<h1 class="widgettitle">Categories</h1>
+			<a href="#" class="cat-down button"><i class="genericon genericon-expand"></i><span>Expand/Collapse</span></a>
+			<div class="catcol">
+				<ul class="maincat-list small-block-grid-1 medium-block-grid-1 large-block-grid-1">
+				{% for heading in categories.keys() %}
+					<li class="maincat cat-item-24">
+						<a href="{{url_for('main.parent_category', parent_category = heading)}}" title="{{ heading }}" title="">{{ heading }}</a>
+					</li>
+				{% endfor %}
+				</ul>
+			</div>
+			<!-- /catcol -->
+	</aside>
+</div>
+<div class="row">
+	<aside id="tr_125_ads-4" class="widget large-12 columns widget-125-ads">
+		<h1 class="widgettitle">Sponsored Ads</h1>
+		<ul class="ads">
+			<li class="white-con"><a href="#" rel="nofollow" target="_self">
+				<img src="../static/img/itechfor.png" width="125" height="125" alt="ITechFor" /></a>
+			</li> 
+			<li class="white-con">
+				<a href="#" rel="nofollow" target="_self"><img src="../static/img/itechfor.png" width="125" height="125" alt="ITechFor" /></a>
+			</li> 
+			<li class="white-con">
+				<a href="#" rel="nofollow" target="_self"><img src="../static/img/itechfor.png" width="125" height="125" alt="ITechFor" /></a>
+			</li> 
+			<li class="white-con">
+				<a href="#" rel="nofollow" target="_self"><img src="../static/img/itechfor.png" width="125" height="125" alt="ITechFor" /></a>
+			</li> 
+		</ul>
+	</aside></div>
+	</div><!-- end #sidebar -->
+
+{% endblock body %}

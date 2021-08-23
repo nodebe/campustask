@@ -60,6 +60,9 @@ def userprofile(form_type=''):
 		form.email.data = current_user.email
 		form.campus.data = current_user.campus
 		form.phone.data = current_user.phone
+		form.bio.data = current_user.bio
+		form.facebook.data = current_user.facebook
+		form.website.data = current_user.website
 
 	if form_type == 'password' and password_form.validate_on_submit():
 		try:
@@ -79,6 +82,9 @@ def userprofile(form_type=''):
 			current_user.phone = form.phone.data
 			current_user.campus = form.campus.data
 			current_user.email = form.email.data
+			current_user.website = form.website.data 
+			current_user.facebook = form.facebook.data
+			current_user.bio = form.bio.data
 			db.session.commit()
 		except Exception as e:
 			flash(error_message + str(e), 'warning')

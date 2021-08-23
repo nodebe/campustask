@@ -40,6 +40,9 @@ class User(db.Model, UserMixin):
 	tasks_owned = db.relationship('Task', backref = 'user_tasks_owned')
 	#link to the user_to_task table
 	tasks_subscribed = db.relationship('Task', secondary=user_to_tasks, backref = db.backref('task_subscribed_to', lazy='dynamic'))
+	bio = db.Column(db.Text, default = '')
+	facebook = db.Column(db.String, default = '')
+	website = db.Column(db.String, default = 'www.campustask.com')
 
 
 class Task(db.Model):

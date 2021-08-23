@@ -1,8 +1,8 @@
 from campustask.models import User
 from flask_login import current_user
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, BooleanField, SelectField
-from wtforms.fields.html5 import EmailField, TelField
+from wtforms import StringField, PasswordField, BooleanField, SelectField, TextAreaField
+from wtforms.fields.html5 import EmailField, TelField, URLField
 from wtforms.validators import InputRequired, Length, EqualTo, ValidationError
 from campustask.users.config import campus_choice
 from passlib.hash import sha256_crypt as sha256
@@ -26,6 +26,9 @@ class ProfileEdit(FlaskForm):
 	email = EmailField('Email:', validators = [InputRequired('Fill in a valid Email')])
 	phone = TelField('Phone Number:')
 	campus = SelectField('Campus:', choices=campus_choice)
+	bio = TextAreaField('Bio:', validators = [Length(max = 300)])
+	facebook = StringField('Facebook id:')
+	website = URLField('Website:')
 
 	def validate_email(self, email):
 		if email.data != current_user.email:
