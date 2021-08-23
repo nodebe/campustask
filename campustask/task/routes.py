@@ -43,6 +43,11 @@ def add_service():
 
 	return render_template('add-service.html', title = 'Add service', categories = get_categories(), form = form)
 
+@task.route('/view_service/<service_id>')
+def view_service(service_id):
+
+	return service_id
+
 @task.route('/service_payment_description')
 def service_payment_description():
 	return "Description on different payment plans. <a href='/add_service'> Continue</a>"

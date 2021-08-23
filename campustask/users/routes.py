@@ -3,7 +3,7 @@ from flask_login import login_required, login_user, current_user
 from campustask import db
 # from campustask.main.routes import CATEGORIES
 from campustask.users.forms import Register, ProfileEdit, PasswordChange
-from campustask.models import User, get_categories
+from campustask.models import User, get_categories, Task
 from passlib.hash import sha256_crypt as sha256
 
 
@@ -45,7 +45,7 @@ def login():
 @login_required
 def user_dashboard():
 
-	return "<h1>User dashboard</h1>"
+	return render_template('dashboard.html', title = 'Dashboard')
 
 @users.route('/userprofile', methods = ['GET', 'POST'])
 @users.route('/userprofile/<string:form_type>', methods = ['GET', 'POST'])
