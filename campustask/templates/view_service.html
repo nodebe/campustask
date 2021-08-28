@@ -95,13 +95,18 @@
 
 					<div class="post-info">
 						<ul class="button-group">
-							<li><a class="fave-button listing-fave-link button" href="#" rel="nofollow"><i class="genericon genericon-heart"></i> <span>Favorite</span></a></li>
+							<li>
+								<a class="fave-button listing-fave-link button" href="#" rel="nofollow">
+								<i class="genericon genericon-heart"></i> <span>Favorite</span></a></li>
 							<li></li>
-							<li><a href="#" class="button secondary">
-			<i class="genericon genericon-edit"></i>
-			<span>Edit Service</span>
-		</a>
-	</li>
+							{% if current_user == task.user_tasks_owned %}
+							<li>
+								<a href="{{ url_for('task.add_service', task_id=task.id) }}" class="button secondary">
+								<i class="genericon genericon-edit"></i>
+								<span>Edit Service</span>
+								</a>
+							</li>
+							{% endif %}
 						</ul>
 
 						<p class="desc-label">Description</p>

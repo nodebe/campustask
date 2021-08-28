@@ -260,10 +260,8 @@ Perfect!</p>
 								{{recent.title}}</a>
 						</h2>
 
-						
-						
 						<span class="recent-post-date clearfix">
-							by&nbsp;<a href="{{ url_for('task.view_all_service', user_id=recent.user_tasks_owned.id) }}" title="{{ recent.user_tasks_owned.username }}">{{user.username}} <span class="author-posts-qty"><em class="separator">(</em>{{ recent.user_tasks_owned.tasks_owned | length }}<em class="separator">)</em></span></a>
+							by&nbsp;<a href="{{ url_for('task.view_all_service', user_id=recent.user_tasks_owned.id) }}" title="{{ recent.user_tasks_owned.username }}">{{recent.user_tasks_owned.username}} <span class="author-posts-qty"><em class="separator">(</em>{{ recent.user_tasks_owned.tasks_owned | length }}<em class="separator">)</em></span></a>
 						</span>
 					</div>
 				</li><!-- end recent-box -->				

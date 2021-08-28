@@ -27,6 +27,7 @@ def save_picture(form_picture):
 
 def delete_picture(pic_name_list):
 	for i in pic_name_list:
+		print(i)
 		picture_path_normal = os.path.join(app.root_path, 'static/img/tasks/normal', i)
 		picture_path_slides = os.path.join(app.root_path, 'static/img/tasks/slides', i)
 		os.remove(picture_path_normal)

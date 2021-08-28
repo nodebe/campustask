@@ -47,11 +47,22 @@
 									<div class='frame'>
 										<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
 											{% for i in categories.keys() %}
-												<li><label class="selectit">
+												<li>
+													<label class="selectit">
+													{% if i in category %}
+													<input type="checkbox" checked class="required" value="{{i}}" name="header">{{i}}</label>
+													{% else %}
 													<input type="checkbox" class="required" value="{{i}}" name="header">{{i}}</label>
+													{% endif %}
 													<ul class="children">
 														{% for j in categories[i] %}
-														<li><label class="selectit"><input type="checkbox"  class="required" value="{{j}}" name="subheader" />{{j}}</label></li>
+														<li><label class="selectit">
+															{% if j in sub_category %}
+															<input type="checkbox" class="required" checked value="{{j}}" name="subheader" />{{j}}</label>
+															{% else %}
+															<input type="checkbox" class="required" value="{{j}}" name="subheader" />{{j}}</label>
+															{% endif %}
+														</li>
 														{% endfor %}
 													</ul>
 												</li>
@@ -69,7 +80,7 @@
 
 							<fieldset>
 								<div class="form-field">
-									<button class="button large success" type="submit">Next Step</button>
+									<button class="button large success" type="submit">Submit</button>
 								</div>
 							</fieldset>
 						</form>											
@@ -84,30 +95,32 @@
 <div class="row">
 	<aside id="appthemes_recent_posts-3" class="widget large-12 columns widget-recent-posts">
 		<h1 class="widgettitle">Recent Services</h1>
+			<ul>
+				{% for recent in recent_tasks[::-1] %}
+				<li class="recent-box post-96 service type-service status-publish has-post-thumbnail hentry service_cat-css-html service_cat-databases service_cat-javascript service_cat-joomla-drupal service_cat-php service_cat-programming-tech service_cat-wordpress-programming-tech service_tag-ajax service_tag-css service_tag-html service_tag-javascript-2 service_tag-jquery service_tag-mysql service_tag-php service_tag-web-development">
 
-		<ul>				
-			<li class="recent-box post-96 service type-service status-publish has-post-thumbnail hentry service_cat-css-html service_cat-databases service_cat-javascript service_cat-joomla-drupal service_cat-php service_cat-programming-tech service_cat-wordpress-programming-tech service_tag-ajax service_tag-css service_tag-html service_tag-javascript-2 service_tag-jquery service_tag-mysql service_tag-php service_tag-web-development">
-
-				<div class="recent-box-thumb left">
-					<a href="#" title="I can write or fix PHP script , php code, website, web site, mysql, css, html, jquery" >
-						<img width="60" height="60" src="taskerr/files/2014/08/brain-60x60.jpg" class="attachment-recent-posts-widget size-recent-posts-widget wp-post-image" alt="" loading="lazy" srcset="https://demos.appthemes.com/taskerr/files/2014/08/brain-60x60.jpg 60w, https://demos.appthemes.com/taskerr/files/2014/08/brain-150x150.jpg 150w, https://demos.appthemes.com/taskerr/files/2014/08/brain-180x180.jpg 180w" sizes="(max-width: 60px) 100vw, 60px" />	
-					</a>
-					<div class="recent-stars">
-						<span class="stars stars-0">
-							<i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i>	
+					<div class="recent-box-thumb left">
+						<a href="{{ url_for('task.view_service', service_id=recent.id) }}" title="{{ recent.title }}" >
+							<img width="60" height="60" src="../static/img/tasks/normal/{{recent.image_name[0]}}" class="attachment-recent-posts-widget size-recent-posts-widget wp-post-image" alt="" loading="lazy" />				
+						</a>
+						<div class="recent-stars">
+							<span class="stars stars-0">
+								<i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i><i class="genericon genericon-star bad-star"></i>	</span>
+						</div>
+					
+					</div><!-- end recent-box-thumb -->
+					<div class="recent-box-content">
+						<h2 class="recent-box-title">
+							<a href="{{ url_for('task.view_service', service_id=recent.id) }}" title="{{ recent.title }}" rel="bookmark">
+								{{recent.title}}</a>
+						</h2>	
+						<span class="recent-post-date clearfix">
+							by&nbsp;<a href="{{ url_for('task.view_all_service', user_id=recent.user_tasks_owned.id) }}" title="{{ recent.user_tasks_owned.username }}">{{recent.user_tasks_owned.username}} <span class="author-posts-qty"><em class="separator">(</em>{{ recent.user_tasks_owned.tasks_owned | length }}<em class="separator">)</em></span></a>
 						</span>
 					</div>
-				</div><!-- end recent-box-thumb -->
-				<div class="recent-box-content">
-					<h2 class="recent-box-title">
-						<a href="#" rel="bookmark" title="I can write or fix PHP script , php code, website, web site, mysql, css, html, jquery">I can write or fix PHP script , php code, website, web site, mysql, css, html, jquery</a>
-					</h2>
-					<span class="recent-post-date clearfix">
-						by&nbsp;<a href="taskerr/author/afrolov/afrolov.html">Artem <span class="author-posts-qty"><em class="separator">(</em>3<em class="separator">)</em></span></a>&nbsp;on&nbsp;August 25, 2014						
-					</span>
-				</div>
-			</li><!-- end recent-box -->
-		</ul>
+				</li><!-- end recent-box -->				
+				{% endfor %}
+			</ul>
 	</aside>
 </div>
 <div class="row">
