@@ -2,7 +2,7 @@ from campustask.models import User
 from flask_login import current_user
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, BooleanField, SelectField, TextAreaField
-from wtforms.fields.html5 import EmailField, TelField, URLField
+from wtforms.fields import EmailField, TelField, URLField
 from wtforms.validators import InputRequired, Length, EqualTo, ValidationError
 from campustask.users.config import campus_choice
 from passlib.hash import sha256_crypt as sha256

@@ -1,7 +1,7 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, BooleanField, TextAreaField, MultipleFileField
 from flask_wtf.file import FileAllowed
-from wtforms.fields.html5 import IntegerField
+from wtforms.fields import IntegerField
 from wtforms.validators import InputRequired, Length, NumberRange
 
 

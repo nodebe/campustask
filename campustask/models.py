@@ -141,6 +141,7 @@ def get_categories():
 	'''
 	This creates and sends categories to pages that need to display them
 	'''
+	# db.session.rollback()
 	db_categories = Category.query.all()
 
 	categories = {}
